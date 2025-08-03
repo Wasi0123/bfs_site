@@ -1,0 +1,620 @@
+/*
+Theme Name: SuperClean Cleaning Services
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: SuperClean is specially designed product packaged for cleaning services by TemplatesJungle.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Background Color
+  2.3 Section
+    - Section Paddings
+    - Section Margins
+    - Section Title
+    - Content width
+  2.4 Buttons
+    - Primary Buttons
+    - Outline Buttons
+
+3. CONTENT ELEMENTS
+  - Dropdown
+  - Form
+  - Svg Color
+
+4. SITE STRUCTURE
+  4.1 Header
+  4.2 Slider Section
+  4.3 Our Services
+  4.4 Quote Section
+  4.5 Testimonial Section
+  4.6 Faqs Section
+  4.7 Pagination
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #14ADEF;
+  --black-color: #2C2E2F;
+  --light-black-color: #343536;
+  --dark-color: #666A6C;
+  --primary-color: #EE8E1E;
+  --primary-color-200: #E8F0F1;
+  --primary-color-400: #c4e9ed;
+  --gray-color: #777F81;
+
+  --bs-dark-rgb: 88,90,91;
+
+  --bs-gray-100: #F6F6F6;
+  --bs-gray-300: #DCDCDC;
+  --bs-primary-text-emphasis: var(--primary-color);
+
+  --bs-light-rgb: rgba(255, 255, 255, 1);
+  --bs-primary-rgb: rgb(238, 142, 30, 1);
+  --light-color: #fdfdfd;
+  --swiper-theme-color: #111 !important;
+  --cadet-blue-color: #9AB4B7;
+}
+
+/* Fonts */
+:root {
+  --heading-font: "Source Sans 3", sans-serif;
+  --body-font: "Lora", serif;
+}
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-color);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  letter-spacing: 0.32px;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+p {
+  color: var(--dark-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+.text-light{
+  color: var(--light-color) !important;
+}
+.text-primary{
+  color: var(--primary-color) !important;
+}
+.text-black{
+  color: var(--black-color) !important;
+}
+
+/* 2.2 Background Color
+/*----------------------------------------------*/
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-gray{
+  background-color: var(--bs-gray-100) !important;
+}
+.bg-accent-gradient{
+  background: linear-gradient(90deg, #18A7E4 0%, #1BADEC 0.01%, #0A9CDB 100%);
+}
+.bg-primary-200 {
+  background-color: var(--primary-color-200) !important;
+}
+.bg-primary-dim {
+  background-color: var(--bs-primary-rgb) !important;
+}
+
+/*--------------------------------------------------------------
+/** 2.3 Section
+--------------------------------------------------------------*/
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 8.125em;
+  padding-bottom: 8.125em;
+}
+.padding-medium {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+.padding-large {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+/* - Section Margin
+--------------------------------------------------------------*/
+.margin-small {
+  margin-top: 8.125em;
+  margin-bottom: 8.125em;
+}
+.margin-medium {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+.margin-large {
+  margin-top: 12em;
+  margin-bottom: 12em;
+}
+
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.84px;
+  line-height: 115%;
+}
+h4,
+h5,
+h6 {
+  color: var(--light-black-color);
+  font-weight: 600;
+}
+
+h1{
+  font-size: 3.625rem;
+}
+h2{
+  font-size: 3.25rem;
+}
+h3{
+  font-size: 2.625rem;
+}
+h4{
+  font-size: 1.75rem;
+}
+h5{
+  font-size: 1.563rem;
+}
+h6{
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 999px) {
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2.95rem;
+  }
+  h3{
+    font-size: 2.3rem;
+  }
+  h4{
+    font-size: 1.25rem;
+  }
+  h5{
+    font-size: 1.20rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h1{
+    font-size: 2.6rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.9rem;
+  }
+}
+
+.fs-4{
+  font-size: 1.188rem !important;
+  line-height: 164%;
+}
+
+/* Section Title */
+.section-title p{
+  color: var(--primary-color);
+}
+
+/* - Content width
+--------------------------------------------------------------*/
+.container-md {
+  max-width: 1465px;
+}
+
+.container-lg {
+  max-width: 1750px;
+}
+
+/* Animation */
+@media (min-width: 200px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+/* Animate Slide */
+@keyframes slide {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slide {
+  -webkit-animation-name: slide;
+  animation-name: slide;
+}
+
+/*--------------------------------------------------------------
+/** 2.4 Buttons
+--------------------------------------------------------------*/
+.btn {
+  color: var(--light-color);
+  border: 0;
+  font-weight: 600;
+  letter-spacing: 1.28px;
+  box-shadow: none;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  width: fit-content;
+  text-align: center;
+}
+.btn:hover {
+  background-color: var(--accent-color);
+}
+.btn:focus {
+  box-shadow: none;
+}
+
+/* Primary Buttons */
+.btn-primary{
+  background-color: var(--primary-color);
+}
+.btn-primary:hover{
+  border: none;
+}
+.btn-primary:active{
+  background-color: var(--accent-color);
+}
+
+/* Outline Buttons */
+.btn-outline{
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  background-color: transparent;
+}
+.btn-outline:hover{
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+.btn-outline-small{
+  padding: 4px 20px;
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+/** 3.CONTENT ELEMENTS
+--------------------------------------------------------------*/
+
+/* Dropdown
+------------------------------------------------------------- */
+.dropdown-item {
+  color: var(--dark-color);
+}
+.dropdown-item.active, .dropdown-item:hover, .dropdown-item:active{
+  color: var(--dark-color);
+  background-color: var(--bs-gray-300);
+}
+
+/* Form
+------------------------------------------------------------- */
+.form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+.form-check-input:focus {
+  border-color: var(--accent-color);
+  outline: 0;
+  box-shadow: none;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+input, select, textarea {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+select:focus {
+  box-shadow: none;
+}
+
+/* Svg Color
+------------------------------------------------------------- */
+svg.light-color {
+  color: var(--light-color);
+}
+
+svg.dark-color {
+  color: var(--dark-color);
+}
+
+svg.light-blue-color{
+  color: #5BC4F1;
+}
+
+svg.primary-color {
+  color: var(--primary-color);
+}
+
+svg.accent-color {
+  color: var(--accent-color);
+}
+
+svg.primary-color-500 {
+  color: var(--bs-primary-rgb);
+}
+
+/* swiper override */
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 6px;
+}
+.swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+}
+.swiper-pagination-bullet-active{
+  background: var(--primary-color);
+}
+
+/*----------------------------------------------*/
+/* 4 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* 4.1 Header
+/*----------------------------------------------*/
+
+a.nav-link{
+  text-transform: capitalize;
+  color: var(--dark-color);
+}
+a.nav-link:focus{
+  color: var(--dark-color);
+}
+a.nav-link.active,
+a.nav-link:hover{
+  color: var(--primary-color)!important;
+  outline: none;
+}
+
+#primary-header .dropdown .search::after{
+  content: none;
+}
+#primary-header .search-dropdown .dropdown-menu{
+  width: 260px;
+}
+#primary-header .search-dropdown .dropdown-menu input{
+  min-width: 100%;
+}
+#primary-header .search-dropdown .dropdown-menu button{
+  padding: 0 12px;
+  min-height: -webkit-fill-available;
+  border-radius: 0.25rem;
+}
+
+/* 4.2 Slider Section
+/*----------------------------------------------*/
+section#slider .banner-content{
+  width: 40%;
+  background: rgba(253, 253, 253, 0.90);
+}
+section#slider .main-slider-button-next, .main-slider-button-prev{
+  z-index: 111111;
+  height: fit-content;
+  opacity: 0.9;
+}
+section#slider .main-slider-button-next.swiper-button-disabled, .main-slider-button-prev.swiper-button-disabled{
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 999px) {
+  section#slider .banner-content{
+    width: 66%;
+  }
+}
+
+/* Our Services
+/*----------------------------------------------*/
+#our-services .service img{
+  box-shadow: 0px 0px 0px 8px #E3F2F9;
+  transition: 0.3s ease-in-out;
+}
+#our-services .service img:hover{
+  box-shadow: 0px 0px 0px 14px #E3F2F9;
+}
+
+/* Quote Section
+/*----------------------------------------------*/
+.contact-form select,
+.contact-form input,
+.contact-form .input-group input {
+  height: 60px;
+}
+
+/* Testimonial Section
+/*----------------------------------------------*/
+#testimonial .author-detail img{
+  width: 57px;
+  height: 57px;
+  border-radius: 100px;
+}
+
+/* Faqs Section
+/*----------------------------------------------*/
+.accordion-button{
+  font-size: inherit;
+}
+.accordion .accordion-button::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='minus' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+  transform: rotate(0deg);
+}
+
+/* Pagination
+--------------------------------------------------------------*/
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--dark-color);
+  border-color: var(--dark-gray-color);
+}
+.page-link:hover {
+  z-index: 2;
+  color: var(--dark-color);
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+.page-link:focus {
+  z-index: 3;
+  color: var(--dark-color);
+  background-color: #e9ecef;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--dark-gray-color);
+}
+.page-link {
+  color: var(--dark-color);
+}
+
+/* override */
+.modal-dialog {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.modal-content {
+  padding: 0;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 0
+}
+
+/* override date-time-picker */
+div.datetime-container, div.datetime-container * {
+  font-family: var(--body-font);
+}
+div.datetime-container button.date, div.datetime-container button.time {
+  background-color: var(--bs-body-bg);
+  border: 1px solid var(--bs-gray-300);
+  border-radius: 0.5rem;
+}
+div.datetime-container button.date.active {
+  border: 1px solid var(--dark-color);
+}
+div.picker {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 10px #cfcfcf;
+}
+div.picker table td.active, div.picker table td.time-selected {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/* override Bootstrap */
+.contact-form input.form-check-input{
+  height: 1em;
+}

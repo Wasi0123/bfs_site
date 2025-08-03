@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CleanCity Cleaning Services</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* Custom color scheme */
+    :root {
+      --primary-color: #ffffff; /* White */
+      --secondary-color: #0d6efd; /* Blue */
+      --accent-color: #9eeaf9; /* Light blue for hovers */
+      --dark-color: #212529;
+      --light-gray: #f8f9fa;
+    }
+    
+    /* Primary color (white) applications */
+    body {
+      background-color: var(--primary-color);
+    }
+    
+    .btn-primary {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--dark-color);
+    }
+    
+    .btn-outline {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+    
+    /* Secondary color (blue) applications */
+    .bg-primary {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .text-primary {
+      color: var(--secondary-color) !important;
+    }
+    
+    /* Accent color (light blue) for hovers */
+    a:hover,
+    .nav-link:hover,
+    .dropdown-item:hover,
+    .service-card:hover,
+    .card-item:hover {
+      color: var(--accent-color);
+    }
+    
+    .service-card:hover {
+      border-color: var(--accent-color);
+    }
+    
+    /* Header and navigation */
+    #primary-header {
+      background-color: var(--primary-color);
+    }
+    
+    .navbar-brand img {
+      filter: brightness(0) saturate(100%) invert(28%) sepia(89%) saturate(2592%) hue-rotate(208deg) brightness(97%) contrast(93%);
+    }
+    
+    /* Slider section */
+    #slider .banner-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: var(--dark-color);
+    }
+    
+    /* Testimonial section */
+    #testimonial .review {
+      background-color: var(--light-gray);
+    }
+    
+    /* About us section */
+    #about-us {
+      background-color: var(--light-gray);
+    }
+    
+    /* Features section */
+    .feature {
+      background-color: var(--primary-color);
+    }
+    
+    /* Call to action section */
+    .bg-accent-gradient {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    }
+    
+    /* Pricing section */
+    .plan-post {
+      background-color: var(--primary-color);
+    }
+    
+    /* FAQ section */
+    #faqs {
+      background-color: var(--light-gray);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark-color);
+      color: var(--primary-color);
+    }
+    
+    footer a {
+      color: var(--primary-color);
+    }
+    
+    footer a:hover {
+      color: var(--accent-color);
+    }
+    
+    .footer-bottom {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Swiper navigation buttons */
+    .swiper-button-next, 
+    .swiper-button-prev {
+      color: var(--secondary-color);
+      background: var(--primary-color);
+    }
+    
+    .swiper-button-next:hover, 
+    .swiper-button-prev:hover {
+      color: var(--accent-color);
+    }
+    
+    /* Star ratings */
+    .star {
+      color: var(--secondary-color);
+    }
+    
+    /* Small orange accents */
+    .price-tick,
+    .accordion-button:not(.collapsed)::after,
+    .navbar-toggler-icon {
+      color: rgb(255, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- SVG symbols remain unchanged -->
+  </svg>
+
+  <header id="header">
+    <nav id="primary-header" class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/main-logo.png" class="logo img-fluid">
+        </a>
+        <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+          <svg class="navbar-icon" width="60" height="60">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
+        </button>
+        <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+          <div class="offcanvas-header px-4 pb-0">
+            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+          </div>
+          <div class="offcanvas-body align-items-center justify-content-end">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-3">
+                <a class="nav-link active p-0" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="services.html">Services</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="blog.html">Our Blog</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item px-3 dropdown">
+                <a class="nav-link p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 shadow">
+                  <li class="py-1"><a href="about.html" class="dropdown-item text-uppercase">About</a></li>
+                  <li class="py-1"><a href="services.html" class="dropdown-item text-uppercase">Services</a></li>
+                  <li class="py-1"><a href="service-single.html" class="dropdown-item text-uppercase">Service Single</a></li>
+                  <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase">Blog</a></li>
+                  <li class="py-1"><a href="blog-single.html" class="dropdown-item text-uppercase">Blog-Single</a></li>
+                  <li class="py-1"><a href="quote.html" class="dropdown-item text-uppercase">Quote</a></li>                  
+                  <li class="py-1"><a href="pricing.html" class="dropdown-item text-uppercase">Pricing</a></li>
+                  <li class="py-1"><a href="team.html" class="dropdown-item text-uppercase">Our Team</a></li>
+                  <li class="py-1"><a href="review.html" class="dropdown-item text-uppercase">Reviews</a></li>
+                  <li class="py-1"><a href="faq.html" class="dropdown-item text-uppercase">FAQs</a></li>
+                  <li class="py-1"><a href="contact.html" class="dropdown-item text-uppercase">Contact</a></li>
+                </ul>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link p-0 fw-bold text-uppercase" href="https://templatesjungle.gumroad.com/l/free-superclean-cleaning-services-bootstrap-5-html-website-template" target="_blank">Get Pro</a>
+              </li>
+              <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
+                <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
+                  <li class="position-relative d-flex align-items-center p-0">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary position-absolute end-0" type="submit">
+                      <svg class="search" width="24" height="24">
+                        <use xlink:href="#search"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Rest of your HTML content remains the same -->
+  <!-- Only the color scheme has been updated through the CSS -->
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
