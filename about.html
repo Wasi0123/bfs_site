@@ -19,6 +19,326 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <style>
+    /* Dark/Light Mode Toggle Styles */
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      margin-left: 15px;
+      font-size: 1.5rem;
+    }
+    
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    
+    body.dark-mode .nv,
+    body.dark-mode .navbar-brand,
+    body.dark-mode .offcanvas-body,
+    body.dark-mode .offcanvas-header,
+    body.dark-mode .card,
+    body.dark-mode .section-title h1,
+    body.dark-mode .section-title h2,
+    body.dark-mode .section-title h3,
+    body.dark-mode .section-title h4,
+    body.dark-mode .section-title h5,
+    body.dark-mode p,
+    body.dark-mode .feature-title,
+    body.dark-mode .feature-desc,
+    body.dark-mode .equipment-card h3,
+    body.dark-mode .equipment-card li,
+    body.dark-mode .section-intro,
+    body.dark-mode .footer-menu,
+    body.dark-mode .footer-menu a,
+    body.dark-mode .footer-bottom p {
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .feature-box,
+    body.dark-mode .equipment-card {
+      background-color: #4343446b;
+      color: #ffffff;
+    }
+    
+    body.dark-mode .equipment-card ul {
+      color: #cccccc;
+    }
+    
+    body.dark-mode .equipment-note {
+      background-color: #2a2a2a;
+      border-left-color: #0d6efd;
+    }
+    
+    body.dark-mode #header {
+      background-color: #1e1e1e;
+    }
+    
+    body.dark-mode .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    body.dark-mode #why{
+      color: #0d6efd !important; 
+      padding-top: 4%;
+    }
+    body.dark-mode .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+    
+    body.dark-mode .bg-gray {
+      background-color: #2a2a2a !important;
+    }
+    
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+    body.dark-mode .why-us{
+      background-color: #121212;
+    }
+    body.dark-mode #why-us{
+      background-color: #121212;
+    }
+    body.dark-mode #el{
+      color: #0d6efd;
+    }
+    body.dark-mode #fi{
+      color: white;
+    }
+    /* Light Mode Styles (default) */
+    .nv {
+      font-size: 18px;
+    }
+    
+    /* Custom CSS for perfect responsiveness */
+    #our-services {
+      background-color: #f8f9fa;
+      position: relative;
+      z-index: 1;
+    }
+    
+    #our-services h3 {
+      color: #0d6efd;
+    }
+    
+    #our-services h2 {
+      color: #0d6efd;
+    }
+    
+    .service-img-container {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px !important;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 575.98px) {
+      .service-img-container {
+        width: 100px;
+        height: 100px;
+      }
+    
+      .card-body {
+        padding: 1.5rem !important;
+      }
+    }
+    
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .service-img-container {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    
+    /* Swiper customizations */
+    .services-swiper {
+      padding: 0 15px 40px;
+    }
+    
+    .swiper-slide {
+      height: auto;
+      padding: 15px 0;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #0d6efd;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 1.2rem;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background: #0d6efd;
+    }
+    
+    .testimonials {
+      justify-content: center;
+      margin: auto;
+      color: #0d6efd;
+      text-align: center;
+    }
+    
+    .testimonials h2 {
+      color: #0d6efd;
+    }
+    
+    .frequently {
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .frequently h3 {
+      color: #0d6efd;
+    }
+    
+    /* Why Us Section */
+    .why-us {
+      background-color: #f9f9f9;
+    }
+    
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    
+    .feature-box {
+      flex: 1 1 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    
+    .feature-desc {
+      color: #7f8c8d;
+      font-size: 1rem;
+    }
+    
+    /* Equipment Section */
+    .our-equipment {
+      background-color: #ffffff;
+      padding: 60px 0;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    
+    .equipment-card {
+      background: #e7e6e6;
+      border-radius: 8px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .equipment-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .equipment-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .equipment-card h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .equipment-card ul {
+      padding-left: 20px;
+      color: #555;
+    }
+    
+    .equipment-card li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    
+    .equipment-note {
+      max-width: 800px;
+      margin: 40px auto 0;
+      padding: 15px 20px;
+      background: #f0f7ff;
+      border-left: 4px solid #3498db;
+      font-size: 0.95rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .features-container {
+        flex-direction: column;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .equipment-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -151,41 +471,22 @@
     <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 16 16">
       <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
     </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="moon" viewBox="0 0 24 24">
+      <path fill="white" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" 
+            opacity="0.9" stroke="#f5f5ff" stroke-width="0.9"/>
+  
+      <path fill="currentColor" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="sun" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
+    </symbol>
   </svg>
 
   <header id="header">
-    <!-- <nav class="header-top bg-gray pt-2 pb-2">
-     
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <ul class="info d-flex flex-wrap list-unstyled m-0">
-            <li class="location text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#location"></use>
-              </svg>State Road 54 Trinity, Florida
-            </li>
-            <li class="phone text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#phone"></use>
-              </svg>call: 666 333 9999
-            </li>
-            <li class="time text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#clock"></use>
-              </svg>8:00-18:00, Sat: Closed
-            </li>
-          </ul>
-          <div class="btn-quote">
-            <a href="quote.html" class="btn btn-outline btn-outline-small text-uppercase">Get a free quote</a>
-          </div>
-        </div>
-      </div>
-    </nav>-->
-
     <nav id="primary-header" class="navbar navbar-expand-lg py-3">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="images/bfs.resized.jpg" class="logo img-fluid">
+          <img src="images/bfs.resized-removebg-preview.png" class="logo img-fluid">
         </a>
         <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
           data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
@@ -200,15 +501,14 @@
           </div>
           <div class="offcanvas-body align-items-center justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
-
-              <li class="nav-item px-3" >
+              <li class="nav-item px-3">
                 <a class="nv" href="index.html">Home</a>
               </li>
               <li class="nav-item px-3" style="color: #0d6efd;">
-                <a class="nv"  aria-current="page" href="about.html">About Us</a>
+                <a class="nv" aria-current="page" href="about.html">About Us</a>
               </li>
-              <li class="nav-item px-3" >
-                <a class="nv"  aria-current="page" href="service.html">Our Services</a>
+              <li class="nav-item px-3">
+                <a class="nv" aria-current="page" href="service.html">Our Services</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nv" href="blog.html">Our Blog</a>
@@ -220,6 +520,16 @@
                 <a class="nv" href="gallery.html">Gallery</a>
               </li>
               
+              <li class="nav-item px-3">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                  <svg id="sun-icon" width="24" height="24">
+                    <use xlink:href="#sun"></use>
+                  </svg>
+                  <svg id="moon-icon" width="24" height="24" style="display: none;">
+                    <use xlink:href="#moon"></use>
+                  </svg>
+                </button>
+              </li>
 
               <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
                 <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -239,7 +549,6 @@
                   </li>
                 </ul>
               </li>
-             
             </ul>
           </div>
         </div>
@@ -250,7 +559,6 @@
   <section id="about-us" class="position-relative bg-gray padding-small">
     <div class="container">
       <div class="row">
-
         <div class="col-md-6">
           <div class="imageblock me-4">
             <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY"
@@ -262,7 +570,7 @@
 
         <div class="col-md-6 mt-5">
           <div class="section-title mb-4">
-            <h1 style="color: #0d6efd;">About Us</h1>
+            <h1 style="color: #0d6efd;" >About Us</h1>
             <h5>Welcome To <span style="color: #0d6efd; font-weight: bolder;">Boniette facility service</span></h5>
           </div>
           <p>Welcome to Boniette facility Services, your trusted partner for top-tier cleaning solutions. With years of industry
@@ -275,128 +583,298 @@
             cutting-edge equipment and eco-friendly products, we leave no detail untouched, providing thorough and
             meticulous cleaning for every corner of your space.
           </p>
-         
         </div>
-
       </div>
     </div>
     <img class="pb-5 position-absolute d-none d-xxl-block end-0 bottom-0 w-auto" src="images/bg-pattern-img.png"
       alt="img">
   </section>
 
+  <section class="why-us">
+    <div class="container">
+      <h2 id="why">What makes us stand out ?</h2>
+      
+      <div class="features-container">
+        <!-- Feature 1 -->
+        <div class="feature-box">
+          <div class="feature-icon">🧹</div>
+          <h3 class="feature-title" >Professional Cleaners</h3>
+          <p class="feature-desc">Our team consists of thoroughly vetted, trained professionals who take pride in delivering exceptional cleaning results every time.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-box">
+          <div class="feature-icon">🌿</div>
+          <h3 class="feature-title" >Eco-Friendly Products</h3>
+          <p class="feature-desc">We use environmentally friendly cleaning solutions that are safe for your family, pets, and the planet.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-box">
+          <div class="feature-icon">⏱️</div>
+          <h3 class="feature-title">Flexible Scheduling</h3>
+          <p class="feature-desc">We work around your schedule with cleaning services available 7 days a week, including evenings upon request.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="feature-box">
+          <div class="feature-icon">🏆</div>
+          <h3 class="feature-title">Award-Winning Service</h3>
+          <p class="feature-desc">Recognized as the best cleaning service in the area with multiple industry awards for excellence.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="feature-box" id="el" style="margin-bottom: 5%;">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">Fully Insured</h3>
+          <p class="feature-desc">For your complete peace of mind, we're fully bonded and insured to protect your home and our team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="our-equipment" id="why-us">
+    <div class="container" >
+      <h2 id="el">Professional-Grade Equipment</h2>
+      <p class="section-intro">We invest in top-tier cleaning tools and technology to deliver superior results for our clients.</p>
+      
+      <div class="equipment-grid">
+        <!-- Equipment Item 1 -->
+        <div class="equipment-card">
+          <div class="equipment-icon">🧽</div>
+          <h3>Microfiber Technology</h3>
+          <ul>
+            <li>Hospital-grade microfiber cloths</li>
+            <li>Electrostatically charged to trap dust</li>
+            <li>99.9% bacteria removal</li>
+          </ul>
+        </div>
+        
+        <!-- Equipment Item 2 -->
+        <div class="equipment-card">
+          <div class="equipment-icon">🧴</div>
+          <h3>Eco-Friendly Solutions</h3>
+          <ul>
+            <li>Green Seal certified products</li>
+            <li>Non-toxic, biodegradable formulas</li>
+            <li>Hypoallergenic options available</li>
+          </ul>
+        </div>
+        
+        <!-- Equipment Item 3 -->
+        <div class="equipment-card">
+          <div class="equipment-icon">🧹</div>
+          <h3>Advanced Tools</h3>
+          <ul>
+            <li>HEPA-filter vacuums (allergen removal)</li>
+            <li>Commercial-grade steam cleaners</li>
+            <li>Extension dusters for high surfaces</li>
+          </ul>
+        </div>
+        
+        <!-- Equipment Item 4 -->
+        <div class="equipment-card">
+          <div class="equipment-icon">🚿</div>
+          <h3>Specialized Equipment</h3>
+          <ul>
+            <li>Grout cleaning systems</li>
+            <li>Hard water stain removers</li>
+            <li>UV sanitizing lights</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="equipment-note">
+        <p><strong>Note:</strong> All equipment is regularly maintained and sanitized between jobs to ensure peak performance and hygiene.</p>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact-info" class="py-5 bg-accent-gradient">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-center">
+          <svg class="star me-1 light-blue-color" width="90" height="90">
+            <use xlink:href="#call-chat-rounded-outline" />
+          </svg>
+          <div class="contact-info-text ms-3">
+            <h5 class="text-light mb-0">Give Us Call</h5>
+            <h5 class="fw-light text-light">+1-438-763-6430</h5>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <svg class="star me-1 light-blue-color" width="90" height="90">
+            <use xlink:href="#point-on-map-outline" />
+          </svg>
+          <div class="contact-info-text ms-3">
+            <h5 class="text-light mb-0">13 RUE J-B D'Amour</h5>
+            <h5 class="fw-light text-light">Mercier,QC,J6R OC5</h5>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <svg class="star me-1 light-blue-color" width="90" height="90">
+            <use xlink:href="#pen-new-round-outline" />
+          </svg>
+          <div class="contact-info-text ms-3">
+            <h5 class="text-light mb-0">Contact Us</h5>
+            <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer id="footer">
+    <div class="container padding-medium pb-5">
+      <div class="row flex-wrap justify-content-between">
+        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h6 class="widget-title pb-2 fw-semibold" id="fi">Boniette facility service</h6>
+            <ul class="menu-list d-flex flex-column list-unstyled">
+              <li class="pb-2">
+                <a href="about.html">About Us</a>
+              </li>
+              <li class="pb-2">
+                <a href="gallery.html">Gallery</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Our Services</a>
+              </li>
+              <li class="pb-2">
+                <a href="blog.html">blog</a>
+              </li>
+              <li class="pb-2">
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h6 class="widget-title pb-2 fw-semibold" id="fi">Services</h6>
+            <ul class="menu-list d-flex flex-column list-unstyled">
+              <li class="pb-2">
+                <a href="service.html">Deep cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Window cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Office cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Move in/ Move out cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Green cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">commercial cleaning</a>
+              </li>
+              <li class="pb-2">
+                <a href="service.html">Waste management </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h6 class="widget-title pb-2 fw-semibold" id="fi">Help</h6>
+            <ul class="menu-list d-flex flex-column list-unstyled">
+              <li class="pb-2">
+                <a href="about.html">FAQs</a>
+              </li>
+              <li class="pb-2">
+                <a href="contact.html">Get in touch</a>
+              </li>
+              <li class="pb-2">
+                <a href="about.html">Info</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+          <div class="footer-menu">
+            <h6 class="widget-title pb-2 fw-semibold" id="fi">Book your service</h6>
+            <p>Get best dedicated team of professionals for your service.</p>
+            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" id="fi">Book Service</a>
+            <h5 class="text-capitalize fw-light mt-3" id="fi">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray">
+      <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
+        <p class="mb-0">© 2025 Boniette facility service  - All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Popup -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
+              height="40">
+              <use xlink:href="#close-sharp"></use>
+            </svg></button>
+          <div class="ratio ratio-16x9">
+            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+              allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   
-
-  <style>
-    .nv {
-      font-size: 18px;
-    }
-
-    /* Custom CSS for perfect responsiveness */
-    #our-services {
-      background-color: #f8f9fa;
-      position: relative;
-      z-index: 1;
-    }
-
-    #our-services h3 {
-      color: #0d6efd;
-    }
-
-    #our-services h2 {
-      color: #0d6efd;
-    }
-
-    .service-img-container {
-      width: 150px;
-      height: 150px;
-      overflow: hidden;
-    }
-
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 12px !important;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 575.98px) {
-      .service-img-container {
-        width: 100px;
-        height: 100px;
-      }
-
-      .card-body {
-        padding: 1.5rem !important;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 767.98px) {
-      .service-img-container {
-        width: 120px;
-        height: 120px;
-      }
-    }
-
-    /* Swiper customizations */
-    .services-swiper {
-      padding: 0 15px 40px;
-    }
-
-    .swiper-slide {
-      height: auto;
-      padding: 15px 0;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #0d6efd;
-      background: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 1.2rem;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #0d6efd;
-    }
-
-    .testimonials {
-      justify-content: center;
-      margin: auto;
-      color: #0d6efd;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      color: #0d6efd;
-    }
-
-    .frequently {
-      text-align: center;
-      text-decoration: none;
-
-    }
-
-    .frequently h3 {
-      color: #0d6efd;
-    }
-  </style>
-
   <script>
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    
+    // Check for saved user preference or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    // Apply the current theme
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      document.body.classList.remove('dark-mode');
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+    
+    // Toggle theme when button is clicked
+    themeToggle.addEventListener('click', () => {
+      if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+    });
+    
     // Initialize Swiper with responsive breakpoints
     document.addEventListener('DOMContentLoaded', function () {
       const servicesSwiper = new Swiper('.services-swiper', {
@@ -436,560 +914,5 @@
       });
     });
   </script>
-
-
-
-
- 
-
-
-  
-  
-  <!--
-  <section id="blogs">
-    <div class="container">
-      <div class="mb-5 d-flex flex-wrap align-items-center justify-content-between">
-        <div class="section-title">
-          <h2 style="color: #0d6efd;">Blogs</h2>
-          <h4>News & Articles</h4>
-        </div>
-        <a href="blog.html" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase">Read all Blogs</a>
-      </div>
-      <div class="post-grid row mt-4">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item1.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Why are we best cleaning company</a>
-              </h6>
-              <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibu adipi massa diamlum... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item2.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Top 10 best cleaning services</a>
-              </h6>
-              <p>Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item3.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Best vacuum cleaners in 2023</a>
-              </h6>
-              <p>Pulvinar sagittis ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item4.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Kitchen cleaning services</a>
-              </h6>
-              <p>Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item5.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">we are Best cleaners for your window</a>
-              </h6>
-              <p>Pulvinar sagittis ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item6.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Top 10 ways to keep city clean</a>
-              </h6>
-              <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibu adipi massa diamlum... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
-  
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>About Us - [Your Cleaning Company Name]</title>
-      <style>
-          /* General Styles */
-          body {
-              font-family: 'Arial', sans-serif;
-              line-height: 1.6;
-              color: #333;
-              margin: 0;
-              padding: 0;
-          }
-          
-          .container {
-              max-width: 1200px;
-              margin: 0 auto;
-              padding: 20px;
-          }
-          
-          section {
-              padding: 60px 0;
-          }
-          
-          h2 {
-              text-align: center;
-              font-size: 2.5rem;
-              margin-bottom: 50px;
-              color: #2c3e50;
-              position: relative;
-          }
-          
-          h2:after {
-              content: "";
-              display: block;
-              width: 80px;
-              height: 4px;
-              background: #3498db;
-              margin: 15px auto;
-          }
-          
-          /* Why Us Section */
-          .why-us {
-              background-color: #f9f9f9;
-          }
-          
-          .features-container {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              gap: 30px;
-          }
-          
-          .feature-box {
-              flex: 1 1 300px;
-              background: white;
-              padding: 30px;
-              border-radius: 8px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-              transition: transform 0.3s ease;
-              text-align: center;
-          }
-          
-          .feature-box:hover {
-              transform: translateY(-10px);
-          }
-          
-          .feature-icon {
-              font-size: 3rem;
-              color: #3498db;
-              margin-bottom: 20px;
-          }
-          
-          .feature-title {
-              font-size: 1.5rem;
-              margin-bottom: 15px;
-              color: #2c3e50;
-          }
-          
-          .feature-desc {
-              color: #7f8c8d;
-              font-size: 1rem;
-          }
-          
-          /* Responsive adjustments */
-          @media (max-width: 768px) {
-              .features-container {
-                  flex-direction: column;
-              }
-              
-              h2 {
-                  font-size: 2rem;
-              }
-          }
-      </style>
- 
-      <section class="why-us">
-          <div class="container">
-              <h2>What makes us stand out ?</h2>
-              
-              <div class="features-container">
-                  <!-- Feature 1 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">🧹</div>
-                      <h3 class="feature-title">Professional Cleaners</h3>
-                      <p class="feature-desc">Our team consists of thoroughly vetted, trained professionals who take pride in delivering exceptional cleaning results every time.</p>
-                  </div>
-                  
-                  <!-- Feature 2 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">🌿</div>
-                      <h3 class="feature-title">Eco-Friendly Products</h3>
-                      <p class="feature-desc">We use environmentally friendly cleaning solutions that are safe for your family, pets, and the planet.</p>
-                  </div>
-                  
-                  <!-- Feature 3 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">⏱️</div>
-                      <h3 class="feature-title">Flexible Scheduling</h3>
-                      <p class="feature-desc">We work around your schedule with cleaning services available 7 days a week, including evenings upon request.</p>
-                  </div>
-                  
-                  <!-- Feature 4 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">💯</div>
-                      <h3 class="feature-title">Satisfaction Guaranteed</h3>
-                      <p class="feature-desc">If you're not completely happy with our service, we'll come back and re-clean the area at no additional cost.</p>
-                  </div>
-                  
-                  <!-- Feature 5 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">🏆</div>
-                      <h3 class="feature-title">Award-Winning Service</h3>
-                      <p class="feature-desc">Recognized as the best cleaning service in the area with multiple industry awards for excellence.</p>
-                  </div>
-                  
-                  <!-- Feature 6 -->
-                  <div class="feature-box">
-                      <div class="feature-icon">🔒</div>
-                      <h3 class="feature-title">Fully Insured</h3>
-                      <p class="feature-desc">For your complete peace of mind, we're fully bonded and insured to protect your home and our team.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-
-      <section class="our-equipment">
-    <div class="container">
-        <h2>Professional-Grade Equipment</h2>
-        <p class="section-intro">We invest in top-tier cleaning tools and technology to deliver superior results for our clients.</p>
-        
-        <div class="equipment-grid">
-            <!-- Equipment Item 1 -->
-            <div class="equipment-card">
-                <div class="equipment-icon">🧽</div>
-                <h3>Microfiber Technology</h3>
-                <ul>
-                    <li>Hospital-grade microfiber cloths</li>
-                    <li>Electrostatically charged to trap dust</li>
-                    <li>99.9% bacteria removal</li>
-                </ul>
-            </div>
-            
-            <!-- Equipment Item 2 -->
-            <div class="equipment-card">
-                <div class="equipment-icon">🧴</div>
-                <h3>Eco-Friendly Solutions</h3>
-                <ul>
-                    <li>Green Seal certified products</li>
-                    <li>Non-toxic, biodegradable formulas</li>
-                    <li>Hypoallergenic options available</li>
-                </ul>
-            </div>
-            
-            <!-- Equipment Item 3 -->
-            <div class="equipment-card">
-                <div class="equipment-icon">🧹</div>
-                <h3>Advanced Tools</h3>
-                <ul>
-                    <li>HEPA-filter vacuums (allergen removal)</li>
-                    <li>Commercial-grade steam cleaners</li>
-                    <li>Extension dusters for high surfaces</li>
-                </ul>
-            </div>
-            
-            <!-- Equipment Item 4 -->
-            <div class="equipment-card">
-                <div class="equipment-icon">🚿</div>
-                <h3>Specialized Equipment</h3>
-                <ul>
-                    <li>Grout cleaning systems</li>
-                    <li>Hard water stain removers</li>
-                    <li>UV sanitizing lights</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="equipment-note">
-            <p><strong>Note:</strong> All equipment is regularly maintained and sanitized between jobs to ensure peak performance and hygiene.</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    .our-equipment {
-        background-color: #ffffff;
-        padding: 60px 0;
-        border-top: 1px solid #eaeaea;
-        border-bottom: 1px solid #eaeaea;
-    }
-    
-    .section-intro {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 40px;
-        font-size: 1.1rem;
-        color: #555;
-    }
-    
-    .equipment-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        margin: 0 auto;
-        max-width: 1100px;
-    }
-    
-    .equipment-card {
-        background: #f3f0f0;
-        border-radius: 8px;
-        padding: 25px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .equipment-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .equipment-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-    }
-    
-    .equipment-card h3 {
-        color: #2c3e50;
-        margin-bottom: 15px;
-        font-size: 1.3rem;
-    }
-    
-    .equipment-card ul {
-        padding-left: 20px;
-        color: #555;
-    }
-    
-    .equipment-card li {
-        margin-bottom: 8px;
-        line-height: 1.5;
-    }
-    
-    .equipment-note {
-        max-width: 800px;
-        margin: 40px auto 0;
-        padding: 15px 20px;
-        background: #f0f7ff;
-        border-left: 4px solid #3498db;
-        font-size: 0.95rem;
-    }
-    
-    @media (max-width: 600px) {
-        .equipment-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-  <section id="contact-info" class="py-5 bg-accent-gradient">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#call-chat-rounded-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Give Us Call</h5>
-            <h5 class="fw-light text-light">+1-438-763-6430</h5>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#point-on-map-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">13 RUE J-B D'Amour</h5>
-            <h5 class="fw-light text-light">Mercier,QC,J6R OC5</h5>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#pen-new-round-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Contact Us</h5>
-            <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-
-  <footer id="footer">
-    <div class="container padding-medium pb-5">
-      <div class="row flex-wrap justify-content-between">
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Boniette facility service</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="about.html">About Us</a>
-              </li>
-              <li class="pb-2">
-                <a href="gallery.html">Gallery</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Our Services</a>
-              </li>
-              <li class="pb-2">
-                <a href="blog.html">blog</a>
-              </li>
-              <li class="pb-2">
-                <a href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Services</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="service.html">Deep cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Window cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Office cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Move in/ Move out cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Green cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">commercial cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Waste management </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Help</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="about.html">FAQs</a>
-              </li>
-              <li class="pb-2">
-                <a href="contact.html">Get in touch</a>
-              </li>
-              <li class="pb-2">
-                <a href="about.html">Info</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Book your service</h6>
-            <p>Get best dedicated team of professionals for your service.</p>
-            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;">Book Service</a>
-            <h5 class="text-capitalize fw-light mt-3">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-gray">
-      <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
-        <p class="mb-0">© 2025 Boniette facility service  - All rights reserved</p>
-
-      </div>
-    </div>
-  </footer>
-
-  <!-- Video Popup -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
-              height="40">
-              <use xlink:href="#close-sharp"></use>
-            </svg></button>
-          <div class="ratio ratio-16x9">
-            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-              allow="autoplay"></iframe>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
-
 </html>

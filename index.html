@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>CleanCity Cleaning Services</title>
+  <title>Boniette Facility Services</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +19,175 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <style>
+    /* Dark/Light Mode Toggle Styles */
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      margin-left: 15px;
+    }
+    
+    .theme-toggle svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+    
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    
+    body.dark-mode .card,
+    body.dark-mode .accordion-item,
+    body.dark-mode .form-control,
+    body.dark-mode .form-select,
+    body.dark-mode .feature,
+    body.dark-mode .service-card {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border-color: #333;
+    }
+    
+    body.dark-mode .nv,
+    body.dark-mode .navbar-brand,
+    body.dark-mode .nav-link,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6,
+    body.dark-mode .text-muted {
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .bg-gray {
+      background-color: #1e1e1e !important;
+    }
+    
+    body.dark-mode .btn-outline {
+      border-color: #0d6efd;
+      color: #0d6efd;
+    }
+    
+    body.dark-mode .btn-outline:hover {
+      background-color: #0d6efd;
+      color: #ffffff;
+    }
+    
+    body.dark-mode .accordion-button {
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+    
+    body.dark-mode .accordion-button:not(.collapsed) {
+      background-color: #1e1e1e;
+      color: #0d6efd;
+    }
+    
+    body.dark-mode .footer-bottom {
+      background-color: #1e1e1e !important;
+    }
+    
+    /* Service Card Hover Effect */
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px !important;
+      margin-bottom: 30px;
+      height: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(13, 110, 253, 0.2) !important;
+    }
+    
+    /* Navbar Link Styles */
+    .nv {
+      font-size: 18px;
+      color: #333;
+    }
+    
+    body.dark-mode .nv {
+      color: #ffffff !important;
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      justify-content: center;
+      margin: auto;
+      color: #0d6efd;
+      text-align: center;
+    }
+    
+    .testimonials h2 {
+      color: #0d6efd;
+    }
+    
+    /* FAQ Section */
+    .frequently {
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .frequently h3 {
+      color: #0d6efd;
+    }
+    /* Ensure nav items stay blue in dark mode */
+body.dark-mode .nv {
+  color: #0d6efd !important;
+}
+
+/* Make the active nav item more prominent */
+.nav-item.active .nv {
+  font-weight: 800;
+  text-decoration: none;
+}
+/* Update your existing .nv styles */
+
+
+/* Dark mode hover effect - needs to be more specific */
+body.dark-mode .navbar-nav .nav-item .nv:hover {
+  color: #0d6efd !important;
+}
+
+/* Ensure dark mode doesn't override our hover */
+body.dark-mode .nv {
+  color: #ffffff !important; /* Default text color in dark mode */
+}
+
+/* Active nav item styling */
+.nav-item.active .nv {
+  font-weight: 800;
+  text-decoration: none;
+  color: #0d6efd !important;
+}
+
+/* Dark mode active nav item */
+body.dark-mode .nav-item.active .nv {
+  color: #0d6efd !important;
+}
+body.dark-mode .ab{
+  color: #5294f7 !important;
+}
+body.dark-mode #se{
+  color: #5294f7 !important;
+}
+
+body.dark-mode #ke{
+  color: #5294f7 !important;
+}
+body.dark-mode #wel{
+  background-color: #000000;
+}
+  </style>
 </head>
 
 <body>
-
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
       <path
@@ -92,8 +257,7 @@
       <path fill="currentColor"
         d="M12.076 9.48a.75.75 0 0 0-1.152-.96l-2.5 3A.75.75 0 0 0 9 12.75h1.899l-1.475 1.77a.75.75 0 1 0 1.152.96l2.5-3a.75.75 0 0 0-.576-1.23h-1.899z" />
       <path fill="currentColor" fill-rule="evenodd"
-        d="M9.944 3.25h1.612c1.838 0 3.294 0 4.433.153c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.069.513.107 1.091.128 1.74c.362 0 .695.005.972.042c.356.048.731.16 1.04.47c.31.309.422.684.47 1.04c.043.323.043.72.043 1.152v.09c0 .433 0 .83-.043 1.152c-.048.356-.16.731-.47 1.04c-.309.31-.684.422-1.04.47c-.277.037-.61.042-.972.043c-.021.648-.06 1.226-.128 1.739c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c1.14-.153 2.595-.153 4.433-.153M5.71 4.89c-1.006.135-1.586.389-2.01.812c-.422.423-.676 1.003-.811 2.009c-.138 1.028-.14 2.382-.14 4.289c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008c.423.423 1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h1.5c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812c.423-.423.677-1.003.812-2.009c.138-1.028.14-2.382.14-4.289c0-1.907-.002-3.261-.14-4.29c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14H10c-1.907 0-3.261.002-4.29.14m15.039 5.87v2.48c.095-.004.176-.01.247-.02a.702.702 0 0 0 .177-.042l.003-.001l.001-.003a.702.702 0 0 0 .042-.177c.028-.21.03-.504.03-.997s-.002-.787-.03-.997a.702.702 0 0 0-.042-.177l-.001-.003l-.003-.001a.702.702 0 0 0-.177-.042a2.865 2.865 0 0 0-.247-.02"
-        clip-rule="evenodd" />
+        d="M9.944 3.25h1.612c1.838 0 3.294 0 4.433.153c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.069.513.107 1.091.128 1.74c.362 0 .695.005.972.042c.356.048.731.16 1.04.47c.31.309.422.684.47 1.04c.043.323.043.72.043 1.152v.09c0 .433 0 .83-.043 1.152c-.048.356-.16.731-.47 1.04c-.309.31-.684.422-1.04.47c-.277.037-.61.042-.972.043c-.021.648-.06 1.226-.128 1.739c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c1.14-.153 2.595-.153 4.433-.153M5.71 4.89c-1.006.135-1.586.389-2.01.812c-.422.423-.676 1.003-.811 2.009c-.138 1.028-.14 2.382-.14 4.289c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008c.423.423 1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h1.5c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812c.423-.423.677-1.003.812-2.009c.138-1.028.14-2.382.14-4.289c0-1.907-.002-3.261-.14-4.29c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14H10c-1.907 0-3.261.002-4.29.14m15.039 5.87v2.48c.095-.004.176-.01.247-.02a.702.702 0 0 0 .177-.042l.003-.001l.001-.003a.702.702 0 0 0 .042-.177c.028-.21.03-.504.03-.997s-.002-.787-.03-.997a.702.702 0 0 0-.042-.177l-.001-.003l-.003-.001a.702.702 0 0 0-.177-.042a2.865 2.865 0 0 0-.247-.02" />
     </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" id="smart-vacuum-cleaner-outline" viewBox="0 0 24 24">
       <path fill="currentColor" fill-rule="evenodd"
@@ -151,41 +315,21 @@
     <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 16 16">
       <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
     </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="sun" viewBox="0 0 24 24">
+
+        <path fill="currentColor" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" 
+              opacity="0.9" stroke="#f5f5ff" stroke-width="0.9"/>
+    
+    <symbol xmlns="http://www.w3.org/2000/svg" id="moon" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
+    </symbol>
   </svg>
 
   <header id="header">
-    <!-- <nav class="header-top bg-gray pt-2 pb-2">
-     
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <ul class="info d-flex flex-wrap list-unstyled m-0">
-            <li class="location text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#location"></use>
-              </svg>State Road 54 Trinity, Florida
-            </li>
-            <li class="phone text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#phone"></use>
-              </svg>call: 666 333 9999
-            </li>
-            <li class="time text-capitalize d-flex align-items-center me-4">
-              <svg class="accent-color me-1" width="18" height="18">
-                <use xlink:href="#clock"></use>
-              </svg>8:00-18:00, Sat: Closed
-            </li>
-          </ul>
-          <div class="btn-quote">
-            <a href="quote.html" class="btn btn-outline btn-outline-small text-uppercase">Get a free quote</a>
-          </div>
-        </div>
-      </div>
-    </nav>-->
-
     <nav id="primary-header" class="navbar navbar-expand-lg py-3">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="images/bfs.resized.jpg" class="logo img-fluid">
+          <img src="images/bfs.resized-removebg-preview.png" class="logo img-fluid">
         </a>
         <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
           data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
@@ -200,8 +344,7 @@
           </div>
           <div class="offcanvas-body align-items-center justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
-
-              <li class="nav-item px-3" style="color: #0d6efd;">
+              <li class="nav-item px-3 active"  style="color: #0d6efd;">
                 <a class="nv" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item px-3">
@@ -210,7 +353,6 @@
               <li class="nav-item px-3">
                 <a class="nv" href="service.html">Our Services</a>
               </li>
-
               <li class="nav-item px-3">
                 <a class="nv" href="blog.html">Our Blog</a>
               </li>
@@ -221,7 +363,6 @@
                 <a class="nv" href="gallery.html">Gallery</a>
               </li>
               
-
               <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
                 <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                   aria-expanded="false">
@@ -240,25 +381,35 @@
                   </li>
                 </ul>
               </li>
-             
+              
+              <!-- Dark/Light Mode Toggle -->
+              <li class="nav-item px-3">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                  <svg id="moon-icon" width="24" height="24">
+                    <use xlink:href="#moon"></use>
+                  </svg>
+                  <svg id="sun-icon" width="24" height="24" style="display: none;">
+                    <use xlink:href="#sun"></use>
+                  </svg>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
   </header>
+
   <section id="slider">
     <div class="swiper slider position-relative">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide d-flex"
+      <div class="swiper-wrapper"
           style="background-image: url(images/slider-image.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
-          <div class="banner-content px-5 py-4 text-center m-auto py-5 rounded-4 shadow">
+          <div   id="wel" class="banner-content px-5 py-4 text-center m-auto py-5 rounded-4 shadow">
             <h2 class="mb-0">Best Cleaning Services</h2>
             <p class="fs-4 text-capitalize">Welcome to Boniette Facility Services, your one-stop solution for exceptional
               cleaning services!</p>
             <a href="contact.html" class="btn btn-primary mt-3" style="background-color: #0d6efd;">Get Started</a>
           </div>
-
         </div>
         <div class="position-absolute top-0 bottom-0 end-0 m-auto me-0 me-md-5 main-slider-button-next">
           <svg class="chevron-forward-circle light-color" width="60" height="60">
@@ -271,15 +422,12 @@
           </svg>
         </div>
       </div>
+    </div>
   </section>
-
-
-
 
   <section id="about-us" class="position-relative bg-gray padding-small">
     <div class="container">
       <div class="row">
-
         <div class="col-md-6">
           <div class="imageblock me-4">
             <a type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY"
@@ -291,10 +439,10 @@
 
         <div class="col-md-6 mt-5">
           <div class="section-title mb-4">
-            <h1 style="color: #0d6efd;">About Us</h1>
+            <h1  class="ab"  style="color: #0d6efd;">About Us</h1>
             <h5>Welcome To <span style="color: #0d6efd; font-weight: bolder;">Boniette facility service</span></h5>
           </div>
-          <p>Welcome to Boniette facility Services, your trusted partner for top-tier cleaning solutions. With years of industry
+          <p>Welcome to Boniette Facility Services, your trusted partner for top-tier cleaning solutions. With years of industry
             expertise, we are committed to delivering extra cleaning services that exceed your expectations. Our skilled
             and dedicated team takes pride in transforming spaces into immaculate havens, ensuring cleanliness and
             hygiene for homes and businesses alike.
@@ -306,35 +454,26 @@
           </p>
           <a class="btn btn-primary mt-4" href="about.html" style="background-color: #0d6efd;">Learn More</a>
         </div>
-
       </div>
     </div>
     <img class="pb-5 position-absolute d-none d-xxl-block end-0 bottom-0 w-auto" src="images/bg-pattern-img.png"
       alt="img">
   </section>
 
-
-
-
   <section id="our-services" class="py-5 position-relative overflow-hidden">
-    <!-- Background with overlay for better text contrast -->
     <div class="position-absolute top-0 start-0 w-100 h-100"
       style="background-image: url(images/services-bg.png); background-repeat: no-repeat; background-position: center; background-size: cover; opacity: 0.1; z-index: -1;">
     </div>
     <div class="container-fluid px-lg-5">
-
-      <!-- Section Header -->
       <div class="row justify-content-center mb-5">
         <div class="col-12 col-md-8 col-lg-6 text-center">
-          <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+          <h2  id="se" class="display-5 fw-bold mb-3">Our Services</h2>
           <p class="lead text-muted">Professional cleaning solutions tailored to your every need</p>
         </div>
       </div>
 
-      <!-- Swiper Container -->
       <div class="swiper services-swiper position-relative">
         <div class="swiper-wrapper">
-          <!-- Service 1 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -342,7 +481,7 @@
                   <img class="rounded-circle img-fluid object-fit-cover" src="images/service1.jpg"
                     alt="Deep Cleaning Service" loading="lazy">
                 </div>
-                <h3 class="h5 fw-bold mb-2 ">
+                <h3 class="h5 fw-bold mb-2">
                   <a href="service.html" class="text-decoration-none stretched-link">Residential Cleaning</a>
                 </h3>
                 <p class="text-muted mb-0">Our comprehensive deep cleaning services leave no cranny untouched for a
@@ -351,7 +490,6 @@
             </div>
           </div>
 
-          <!-- Service 2 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -367,7 +505,6 @@
             </div>
           </div>
 
-          <!-- Service 3 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -383,7 +520,6 @@
             </div>
           </div>
 
-          <!-- Service 4 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -399,7 +535,6 @@
             </div>
           </div>
 
-          <!-- Service 5 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -415,7 +550,6 @@
             </div>
           </div>
 
-          <!-- Service 6 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -429,10 +563,8 @@
                   using streak-free techniques.</p>
               </div>
             </div>
-            
           </div>
 
-          <!-- Service 7 -->
           <div class="swiper-slide">
             <div class="card h-100 border-0 shadow-sm service-card">
               <div class="card-body p-4 text-center">
@@ -449,282 +581,17 @@
           </div>
         </div>
 
-        <!-- Navigation Buttons -->
         <div class="swiper-button-next d-none d-lg-flex"></div>
         <div class="swiper-button-prev d-none d-lg-flex"></div>
-
-        <!-- Pagination -->
         <div class="swiper-pagination position-relative mt-4 d-lg-none"></div>
       </div>
     </div>
   </section>
 
-  <style>
-    
-    .nv {
-      font-size: 18px;
-    }
-
-    /* Services Page Custom Styles */
-    .service-hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/service-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 12px !important;
-      margin-bottom: 30px;
-      height: 100%;
-    }
-
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(13, 110, 253, 0.2) !important;
-    }
-
-    .service-icon {
-      font-size: 50px;
-      color: #0d6efd;
-      margin-bottom: 20px;
-    }
-
-    .service-feature {
-      padding: 60px 0;
-    }
-
-    .feature-box {
-      text-align: center;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: #f8f9fa;
-      height: 100%;
-    }
-
-    .feature-icon {
-      font-size: 40px;
-      color: #0d6efd;
-      margin-bottom: 20px;
-    }
-
-    .service-details {
-      padding: 60px 0;
-    }
-
-    .service-tabs .nav-link {
-      color: #495057;
-      font-weight: 600;
-    }
-
-    .service-tabs .nav-link.active {
-      color: #0d6efd;
-      background-color: transparent;
-      border-bottom: 3px solid #0d6efd;
-    }
-
-    .service-benefits {
-      background-color: #f8f9fa;
-      padding: 60px 0;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-
-    .benefit-icon {
-      color: #0d6efd;
-      font-size: 24px;
-      margin-right: 15px;
-      flex-shrink: 0;
-    }
-
-    .cta-section {
-      background-color: #0d6efd;
-      color: white;
-      padding: 60px 0;
-      text-align: center;
-    }
-
-    .section-title {
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background-color: #0d6efd;
-    }
-
-    .service-img {
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    .nv {
-      font-size: 18px;
-    }
-
-    /* Custom CSS for perfect responsiveness */
-    #our-services {
-      background-color: #f8f9fa;
-      position: relative;
-      z-index: 1;
-    }
-
-    #our-services h3 {
-      color: #0d6efd;
-    }
-
-    #our-services h2 {
-      color: #0d6efd;
-    }
-
-    .service-img-container {
-      width: 150px;
-      height: 150px;
-      overflow: hidden;
-    }
-
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 12px !important;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 575.98px) {
-      .service-img-container {
-        width: 100px;
-        height: 100px;
-      }
-
-      .card-body {
-        padding: 1.5rem !important;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 767.98px) {
-      .service-img-container {
-        width: 120px;
-        height: 120px;
-      }
-    }
-
-    /* Swiper customizations */
-    .services-swiper {
-      padding: 0 15px 40px;
-    }
-
-    .swiper-slide {
-      height: auto;
-      padding: 15px 0;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #0d6efd;
-      background: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 1.2rem;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #0d6efd;
-    }
-
-    .testimonials {
-      justify-content: center;
-      margin: auto;
-      color: #0d6efd;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      color: #0d6efd;
-    }
-
-    .frequently {
-      text-align: center;
-      text-decoration: none;
-
-    }
-
-    .frequently h3 {
-      color: #0d6efd;
-    }
-  </style>
-
-  <script>
-    // Initialize Swiper with responsive breakpoints
-    document.addEventListener('DOMContentLoaded', function () {
-      const servicesSwiper = new Swiper('.services-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 100000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-          },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          }
-        }
-      });
-    });
-  </script>
-
-
-
-
   <section id="testimonial" class="padding-medium">
     <div class="container">
       <div class="testimonials">
-        <h2>TESTIMONIALS</h2>
+        <h2 id="se">TESTIMONIALS</h2>
       </div>
       <div class="align-items-center">
         <div class="review-content">
@@ -751,8 +618,8 @@
                       </svg>
                     </div>
                     <blockquote class="mb-0">
-                      <p class="mb-0">“Thier cleaning services are top-notch and amazing i really loved how they cleaned
-                        my house and i can't wait to contact them.”</p>
+                      <p class="mb-0">"Their cleaning services are top-notch and amazing i really loved how they cleaned
+                        my house and i can't wait to contact them."</p>
                     </blockquote>
                   </div>
                   <div class="author-detail mt-4 d-flex align-items-center">
@@ -785,8 +652,8 @@
                       </svg>
                     </div>
                     <blockquote class="mb-0">
-                      <p class="mb-0">“Amazing just amazing i tell u thier services are just the best in town i loved
-                        what they did to my home.”</p>
+                      <p class="mb-0">"Amazing just amazing i tell u their services are just the best in town i loved
+                        what they did to my home."</p>
                     </blockquote>
                   </div>
                   <div class="author-detail mt-4 d-flex align-items-center">
@@ -819,7 +686,7 @@
                       </svg>
                     </div>
                     <blockquote class="mb-0">
-                      <p class="mb-0">“Great job i really like how you cleaned my office it was great.I will definitely be call back next time for cleaning”</p>
+                      <p class="mb-0">"Great job i really like how you cleaned my office it was great.I will definitely be call back next time for cleaning"</p>
                     </blockquote>
                   </div>
                   <div class="author-detail mt-4 d-flex align-items-center">
@@ -852,8 +719,8 @@
                       </svg>
                     </div>
                     <blockquote class="mb-0">
-                      <p class="mb-0">“Thier cleaning services are top-notch and amazing i really loved how they cleaned
-                        my house and i can't wait to contact them.”</p>
+                      <p class="mb-0">"Their cleaning services are top-notch and amazing i really loved how they cleaned
+                        my house and i can't wait to contact them."</p>
                     </blockquote>
                   </div>
                   <div class="author-detail mt-4 d-flex align-items-center">
@@ -873,17 +740,10 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
   <section id="features">
     <div class="container">
       <div class="section-title mb-5 text-center">
-        <h2 style="color: #0d6efd;">Why choose us ?</h2>
+        <h2  id="ke" style="color: #0d6efd;">Why choose us ?</h2>
       </div>
       <div class="row">
         <div class="col-md-4">
@@ -967,72 +827,6 @@
       </div>
     </div>
   </section>
-  <!--
-  <section id="pricing">
-    <div class="container py-5">
-
-      <div class="section-title mb-5 text-center">
-        <p class="mb-2 fs-4 text-capitalize">Pricing Plans</p>
-        <h3>Our Subscription</h3>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-4">
-          <div class="py-5 plan-post d-flex flex-column justify-content-between text-center border rounded-4 text-center my-4">
-            <div class="plan-top">
-              <p class="fs-4 text-capitalize text-primary mb-0">Basic</p>    
-              <h2 class="d-inline mb-5">$200</h2><span class="fs-4">/month</span>
-              <div class="price-option mt-3">
-                <p><span class="price-tick">✓</span> Quisque rhoncus</p>
-                <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
-                <p><span class="price-tick">✓</span> Vivamus velit mir</p>
-                <p><span class="price-tick">✓</span> Elit mir ivamus</p>
-                <p><span class="price-tick">✓</span> Ipsum dolor</p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-outline mx-auto mt-5">Subscribe</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="py-5 plan-post d-flex flex-column justify-content-between text-center border rounded-4 text-center">
-            <div class="plan-top">
-              <p class="fs-4 text-capitalize text-primary mb-0">Premium</p>    
-              <h2 class="d-inline mb-5">$300</h2><span class="fs-4">/month</span>
-              <div class="price-option mt-3">
-                <p><span class="price-tick">✓</span> Quisque rhoncus</p>
-                <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
-                <p><span class="price-tick">✓</span> Vivamus velit mir</p>
-                <p><span class="price-tick">✓</span> Elit mir ivamus</p>
-                <p><span class="price-tick">✓</span> Velit mir</p>
-                <p><span class="price-tick">✓</span> Quisque rhoncus</p>
-                <p><span class="price-tick">✓</span> Rhoncus ivamus</p>
-              </div>
-            </div>  
-            <a href="#" class="btn btn-primary mx-auto mt-5">Subscribe</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="py-5 plan-post d-flex flex-column justify-content-between text-center border rounded-4 text-center my-4">
-            <div class="plan-top">
-              <p class="fs-4 text-capitalize text-primary mb-0">Ultimate</p>    
-              <h2 class="d-inline mb-5">$1600</h2><span class="fs-4">/month</span>
-              <div class="price-option mt-3">
-                <p><span class="price-tick">✓</span> Quisque rhoncus</p>
-                <p><span class="price-tick">✓</span> Lorem ipsum dolor</p>
-                <p><span class="price-tick">✓</span> Vivamus velit mir</p>
-                <p><span class="price-tick">✓</span> Elit mir ivamus</p>
-                <p><span class="price-tick">✓</span> Ipsum dolor</p>
-              </div>
-            </div>  
-            <a href="#" class="btn btn-outline mx-auto mt-5">Subscribe</a>
-          </div>
-        </div>
-        
-      </div>
-
-    </div>
-  </section>-->
 
   <section id="quote" class="bg-gray padding-small margin-medium">
     <div class="container text-center">
@@ -1050,7 +844,6 @@
           <input type="text" name="phone" placeholder="Phone" class="w-100 border ps-4 rounded-3">
         </div>
         
-       
         <div class="col-md-12 col-sm-12 mb-4">
           <select class="form-select focus-transparent w-100 border rounded-3 ps-4" aria-invalid="false" name="choose">
             <option value="Select Your Service">Interested In</option>
@@ -1075,116 +868,6 @@
         style="background-color: #0d6efd;">Submit</a>
     </div>
   </section>
-  <!--
-  <section id="blogs">
-    <div class="container">
-      <div class="mb-5 d-flex flex-wrap align-items-center justify-content-between">
-        <div class="section-title">
-          <h2 style="color: #0d6efd;">Blogs</h2>
-          <h4>News & Articles</h4>
-        </div>
-        <a href="blog.html" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase">Read all Blogs</a>
-      </div>
-      <div class="post-grid row mt-4">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item1.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Why are we best cleaning company</a>
-              </h6>
-              <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibu adipi massa diamlum... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item2.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Top 10 best cleaning services</a>
-              </h6>
-              <p>Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item3.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Best vacuum cleaners in 2023</a>
-              </h6>
-              <p>Pulvinar sagittis ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item4.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Kitchen cleaning services</a>
-              </h6>
-              <p>Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item5.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">we are Best cleaners for your window</a>
-              </h6>
-              <p>Pulvinar sagittis ut dis venenatis nunc nunc vitae aliquam vestibulum. Elit adipi massa diam in dignissim... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-          <div class="card-item">
-            <div class="card border-0 bg-transparent">
-              <div class="card-image position-relative">
-                <img src="images/post-item6.jpg" alt="post-img" class="post-image img-fluid rounded-3">
-              </div>
-            </div>
-            <div class="card-body p-0 mt-2">
-              <h6 class="mt-3">
-                <a href="blog-single.html">Top 10 ways to keep city clean</a>
-              </h6>
-              <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc vitae aliquam vestibu adipi massa diamlum... <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
 
   <section id="faqs" class="bg-gray padding-small margin-medium mb-0">
     <div class="container">
@@ -1394,7 +1077,6 @@
     <div class="bg-gray">
       <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
         <p class="mb-0">© 2025 Boniette facility service  - All rights reserved</p>
-
       </div>
     </div>
   </footer>
@@ -1403,9 +1085,7 @@
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
-
       <div class="modal-content">
-
         <div class="modal-body">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
               height="40">
@@ -1416,9 +1096,7 @@
               allow="autoplay"></iframe>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 
@@ -1428,6 +1106,81 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  
+  <script>
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+    
+    // Check for saved user preference or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    // Apply the current theme
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      moonIcon.style.display = 'none';
+      sunIcon.style.display = 'block';
+    } else {
+      document.body.classList.remove('dark-mode');
+      moonIcon.style.display = 'block';
+      sunIcon.style.display = 'none';
+    }
+    
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+      if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      }
+    });
+    
+    // Initialize Swiper with responsive breakpoints
+    document.addEventListener('DOMContentLoaded', function () {
+      const servicesSwiper = new Swiper('.services-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 100000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          }
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
