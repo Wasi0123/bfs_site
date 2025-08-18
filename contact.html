@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>CleanCity Cleaning Services</title>
+  <title>CleanCity Cleaning Services - Contact Us</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <!-- Font Awesome for WhatsApp icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* Dark Mode Styles */
     body.dark-mode {
@@ -32,6 +34,7 @@
       background-color: #121212 !important;
       border-color: #333;
     }
+
     
     body.dark-mode .navbar,
     body.dark-mode .offcanvas-header {
@@ -144,17 +147,14 @@
       font-weight: 800;
       text-decoration: none;
     }
+    
     /* Nav item styling - applies to all nav items */
-
-/* Active/hover states */
-
-
-/* Dark mode overrides - ensures colors stay the same */
-body.dark-mode .nav-item .nv,
-body.dark-mode .nav-item.active .nv,
-body.dark-mode .nav-item:hover .nv {
-  color: #0d6efd !important; /* Same blue in dark mode */
-}
+    /* Dark mode overrides - ensures colors stay the same */
+    body.dark-mode .nav-item .nv,
+    body.dark-mode .nav-item.active .nv,
+    body.dark-mode .nav-item:hover .nv {
+      color: #0d6efd !important; /* Same blue in dark mode */
+    }
 
     /* Custom CSS for perfect responsiveness */
     #our-services {
@@ -291,6 +291,206 @@ body.dark-mode .nav-item:hover .nv {
     body.dark-mode .section-title:after {
       background-color: #0d6efd;
     }
+    
+    /* WhatsApp Button Styles */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-btn i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .whatsapp-text {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+      }
+      
+      .whatsapp-text {
+        display: none;
+      }
+      
+      .whatsapp-btn i {
+        margin-right: 0;
+        font-size: 28px;
+      }
+    }
+
+    /* Language Switcher Styles */
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+    }
+
+    .language-btn {
+      background: none;
+      border: none;
+      color: #333;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      margin: 0 2px;
+      transition: all 0.3s ease;
+    }
+
+    .language-btn.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    body.dark-mode .language-btn {
+      color: #ffffff;
+    }
+
+    body.dark-mode .language-btn.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    /* Footer WhatsApp Button */
+    .footer-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background-color: #128C7E;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .footer-whatsapp-btn i {
+      margin-right: 8px;
+    }
+
+    /* Contact Page Specific Styles */
+    .contact-info-box {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    body.dark-mode .contact-info-box {
+      background-color: #1e1e1e;
+    }
+    
+    .contact-info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    body.dark-mode .contact-info-box:hover {
+      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+    }
+    
+    .contact-icon {
+      font-size: 40px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    
+    .working-hours {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+    }
+    
+    body.dark-mode .working-hours {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode .sep{
+      background-color: #333;
+    }
+    
+    .working-hours h4 {
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    
+    .working-hours ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .working-hours li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .working-hours .day {
+      font-weight: 600;
+    }
+    
+    /* Form enhancements */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+    
+    .submit-btn {
+      padding: 12px 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
   </style>
 </head>
 
@@ -316,6 +516,12 @@ body.dark-mode .nav-item:hover .nv {
     </symbol>
   </svg>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/14387636430" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text" data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+  </a>
+
   <header id="header">
     <nav id="primary-header" class="navbar navbar-expand-lg py-3">
       <div class="container">
@@ -336,22 +542,29 @@ body.dark-mode .nav-item:hover .nv {
           <div class="offcanvas-body align-items-center justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item px-3">
-                <a class="nv" href="index.html">Home</a>
+                <a class="nv" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nv" href="about.html">About Us</a>
+                <a class="nv" href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nv" aria-current="page" href="service.html">Our Services</a>
+                <a class="nv" aria-current="page" href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nv" href="blog.html">Our Blog</a>
+                <a class="nv" href="blog.html" data-en="Our Blog" data-fr="Notre blog">Our Blog</a>
               </li>
               <li class="nav-item px-3 active" style="color: #0d6efd;">
-                <a class="nv" aria-current="page" href="contact.html">Book Us</a>
+                <a class="nv" aria-current="page" href="contact.html" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nv" href="gallery.html">Gallery</a>
+                <a class="nv" href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
+              </li>
+              
+              <!-- Language Switcher -->
+              <li class="nav-item px-3 language-switcher">
+                <button class="language-btn active" data-lang="en">EN</button>
+                <span style="color: #333;">/</span>
+                <button class="language-btn" data-lang="fr">FR</button>
               </li>
               
               <!-- Dark/Light mode toggle button -->
@@ -375,7 +588,7 @@ body.dark-mode .nav-item:hover .nv {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
                   <li class="position-relative d-flex align-items-center p-0">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-en="Search" data-fr="Rechercher">
                     <button class="btn btn-primary position-absolute end-0" type="submit">
                       <svg class="search" width="24" height="24">
                         <use xlink:href="#search"></use>
@@ -391,49 +604,52 @@ body.dark-mode .nav-item:hover .nv {
     </nav>
   </header>
 
+  
+  <!-- Existing Quote Section -->
   <section id="quote" style="background-color: #f0f2f3; padding-top: 5%; padding-bottom: 5%;">
     <div class="container text-center">
       <div class="section-title">
-        <h2 style="color: #0d6efd;">Book Us Now</h2>
+        <h2 style="color: #0d6efd;" data-en="Book Us Now" data-fr="Réservez maintenant">Book Us Now</h2>
+        <p class="mt-3" data-en="Fill out the form below and we'll get back to you within 24 hours" data-fr="Remplissez le formulaire ci-dessous et nous vous répondrons ">Fill out the form below and we'll get back to you </p>
       </div>
       <form class="contact-form row mt-5">
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="name" placeholder="Full Name" class="w-100 border ps-4 rounded-3">
+          <input type="text" name="name" placeholder="Full Name" class="w-100 border ps-4 rounded-3" data-en="Full Name" data-fr="Nom complet">
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="email" name="email" placeholder="Email" class="w-100 border ps-4 rounded-3">
+          <input type="email" name="email" placeholder="Email" class="w-100 border ps-4 rounded-3" data-en="Email" data-fr="E-mail">
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="phone" placeholder="Phone" class="w-100 border ps-4 rounded-3">
+          <input type="text" name="phone" placeholder="Phone" class="w-100 border ps-4 rounded-3" data-en="Phone" data-fr="Téléphone">
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-          <input type="text" name="city" placeholder="City" class="w-100 border ps-4 rounded-3">
+          <input type="text" name="city" placeholder="City" class="w-100 border ps-4 rounded-3" data-en="City" data-fr="Ville">
         </div>
         <div class="col-md-12 col-sm-12 mb-4">
-          <input type="text" name="property" placeholder="Property Address" class="w-100 border ps-4 rounded-3">
+          <input type="text" name="property" placeholder="Property Address" class="w-100 border ps-4 rounded-3" data-en="Property Address" data-fr="Adresse de la propriété">
         </div>
         <div class="col-md-12 col-sm-12 mb-4">
           <select class="form-select focus-transparent w-100 border rounded-3 ps-4" aria-invalid="false" name="choose">
-            <option value="Select Your Service">Interested In</option>
-            <option value="Service">Deep Cleaning</option>
-            <option value="Service">Window Cleaning</option>
-            <option value="Service">Office Cleaning</option>
-            <option value="Service">Roof Cleaning</option>
-            <option value="Service">Carpet Cleaning</option>
-            <option value="Service">Move In / Move out</option>
-            <option value="Service">Green Cleaning</option>
-            <option value="Service">commercial Cleaning</option>
-            <option value="Service">Waste Management</option>
-            <option value="Service">Sanitization</option>
-            <option value="Service">Disinfection</option>
+            <option value="Select Your Service" data-en="Interested In" data-fr="Service demandé">Interested In</option>
+            <option value="Service" data-en="Deep Cleaning" data-fr="Nettoyage en profondeur">Deep Cleaning</option>
+            <option value="Service" data-en="Window Cleaning" data-fr="Nettoyage de vitres">Window Cleaning</option>
+            <option value="Service" data-en="Office Cleaning" data-fr="Nettoyage de bureau">Office Cleaning</option>
+            <option value="Service" data-en="Roof Cleaning" data-fr="Nettoyage de toiture">Roof Cleaning</option>
+            <option value="Service" data-en="Carpet Cleaning" data-fr="Nettoyage de tapis">Carpet Cleaning</option>
+            <option value="Service" data-en="Move In / Move out" data-fr="Déménagement entrant/sortant">Move In / Move out</option>
+            <option value="Service" data-en="Green Cleaning" data-fr="Nettoyage écologique">Green Cleaning</option>
+            <option value="Service" data-en="Commercial Cleaning" data-fr="Nettoyage commercial">Commercial Cleaning</option>
+            <option value="Service" data-en="Waste Management" data-fr="Gestion des déchets">Waste Management</option>
+            <option value="Service" data-en="Sanitization" data-fr="Assainissement">Sanitization</option>
+            <option value="Service" data-en="Disinfection" data-fr="Désinfection">Disinfection</option>
           </select>
         </div>
         <div class="col-md-12 col-sm-12 mb-4">
-          <textarea class="w-100 border p-3 ps-4 rounded-3" type="text" name="details" placeholder="Details"></textarea>
+          <textarea class="w-100 border p-3 ps-4 rounded-3" type="text" name="details" placeholder="Details" data-en="Details" data-fr="Détails"></textarea>
         </div>
       </form>
-      <a href="#" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase"
-        style="background-color: #0d6efd;">Submit</a>
+      <a href="#" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase submit-btn"
+        style="background-color: #0d6efd;" data-en="Submit" data-fr="Soumettre">Submit</a>
     </div>
   </section>
 
@@ -445,7 +661,7 @@ body.dark-mode .nav-item:hover .nv {
             <use xlink:href="#call-chat-rounded-outline" />
           </svg>
           <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Give Us Call</h5>
+            <h5 class="text-light mb-0" data-en="Give Us Call" data-fr="Appelez-nous">Give Us Call</h5>
             <h5 class="fw-light text-light">+1-438-763-6430</h5>
           </div>
         </div>
@@ -463,7 +679,7 @@ body.dark-mode .nav-item:hover .nv {
             <use xlink:href="#pen-new-round-outline" />
           </svg>
           <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Contact Us</h5>
+            <h5 class="text-light mb-0" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h5>
             <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
           </div>
         </div>
@@ -479,76 +695,80 @@ body.dark-mode .nav-item:hover .nv {
             <h6 class="widget-title pb-2 fw-semibold">Boniette facility service</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="about.html">About Us</a>
+                <a href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
               </li>
               <li class="pb-2">
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Our Services</a>
+                <a href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
               </li>
               <li class="pb-2">
-                <a href="blog.html">blogs</a>
+                <a href="blog.html" data-en="blogs" data-fr="Blogues">blogs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Services</h6>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Services" data-fr="Services">Services</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="service.html">Deep cleaning</a>
+                <a href="service.html" data-en="Deep cleaning" data-fr="Nettoyage en profondeur">Deep cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Window cleaning</a>
+                <a href="service.html" data-en="Window cleaning" data-fr="Nettoyage de vitres">Window cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Office cleaning</a>
+                <a href="service.html" data-en="Office cleaning" data-fr="Nettoyage de bureau">Office cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Move in/ Move out cleaning</a>
+                <a href="service.html" data-en="Move in/ Move out cleaning" data-fr="Nettoyage d'emménagement/déménagement">Move in/ Move out cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Green cleaning</a>
+                <a href="service.html" data-en="Green cleaning" data-fr="Nettoyage écologique">Green cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">commercial cleaning</a>
+                <a href="service.html" data-en="commercial cleaning" data-fr="Nettoyage commercial">commercial cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Waste management </a>
+                <a href="service.html" data-en="Waste management" data-fr="Gestion des déchets">Waste management</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Help</h6>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Help" data-fr="Aide">Help</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="contact.html">FAQs</a>
+                <a href="index.html" data-en="FAQs" data-fr="FAQ">FAQs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Get in touch</a>
+                <a href="contact.html" data-en="Get in touch" data-fr="Contactez-nous">Get in touch</a>
               </li>
               <li class="pb-2">
-                <a href="about.html">Info</a>
+                <a href="about.html" data-en="Info" data-fr="Info">Info</a>
               </li>
               <li class="pb-2">
-                <a href="#">Privacy Policy</a>
+                <a href="#" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Book your service</h6>
-            <p>Get best dedicated team of professionals for your service.</p>
-            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;">Book Service</a>
-            <h5 class="text-capitalize fw-light mt-3">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Book your service" data-fr="Réservez votre service">Book your service</h6>
+            <p data-en="Get best dedicated team of professionals for your service." data-fr="Obtenez la meilleure équipe de professionnels pour votre service.">Get best dedicated team of professionals for your service.</p>
+            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" data-en="Book Service" data-fr="Réserver un service">Book Service</a>
+            <a href="https://wa.me/14387636430" class="footer-whatsapp-btn" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              <span data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+            </a>
+           
           </div>
         </div>
       </div>
@@ -612,6 +832,75 @@ body.dark-mode .nav-item:hover .nv {
         if (!localStorage.getItem('theme')) {
           document.body.classList.toggle('dark-mode', e.matches);
         }
+      });
+      
+      // Language switcher functionality
+      const languageBtns = document.querySelectorAll('.language-btn');
+      let currentLang = localStorage.getItem('language') || 'en';
+      
+      // Set initial language
+      setLanguage(currentLang);
+      
+      // Highlight current language button
+      languageBtns.forEach(btn => {
+        if (btn.dataset.lang === currentLang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Language switcher event listeners
+      languageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.dataset.lang;
+          if (lang !== currentLang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            setLanguage(lang);
+            
+            // Update active button
+            languageBtns.forEach(b => {
+              if (b.dataset.lang === lang) {
+                b.classList.add('active');
+              } else {
+                b.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+      
+      function setLanguage(lang) {
+        // Update all elements with data-en and data-fr attributes
+        document.querySelectorAll('[data-en], [data-fr]').forEach(element => {
+          if (element.dataset[lang]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = element.dataset[lang];
+            } else if (element.tagName === 'OPTION') {
+              // Skip options as they're handled separately
+              if (!element.hasAttribute('value')) {
+                element.textContent = element.dataset[lang];
+              }
+            } else {
+              element.textContent = element.dataset[lang];
+            }
+          }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+      }
+      
+      // Form submission handling
+      const contactForm = document.querySelector('.contact-form');
+      const submitBtn = document.querySelector('.submit-btn');
+      
+      submitBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to your server
+        alert(currentLang === 'en' ? 'Thank you for your message! We will contact you soon.' : 'Merci pour votre message! Nous vous contacterons bientôt.');
+        contactForm.reset();
       });
     });
   </script>

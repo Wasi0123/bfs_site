@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>CleanCity Cleaning Services</title>
+  <title>Boniette Facility Services</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -337,6 +337,193 @@
 body.dark-mode .navbar-nav .nav-item .nv:hover {
   color: #0d6efd !important;
 }
+.footer-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-whatsapp-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-whatsapp-btn i {
+  margin-right: 8px;
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.whatsapp-text {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+      .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+      }
+      
+      .whatsapp-text {
+        display: none;
+      }
+      
+      .whatsapp-btn i {
+        margin-right: 0;
+        font-size: 28px;
+      }
+    }
+
+   
+body.dark-mode .footer-menu{
+  color: #ffffff;
+}
+body.dark-mode #fop  {
+      color: #ffffff !important;
+    }
+    .language-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 0 2px;
+  transition: all 0.3s ease;
+}
+
+.language-btn.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+body.dark-mode .language-btn {
+  color: #ffffff;
+}
+
+body.dark-mode .language-btn.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+
+  /* WhatsApp Floating Button Styles */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  .whatsapp-btn i {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-text {
+    display: inline-block;
+  }
+
+  /* Mobile view - show only icon */
+  @media (max-width: 768px) {
+    .whatsapp-btn {
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      justify-content: center;
+    }
+    
+    .whatsapp-text {
+      display: none;
+    }
+    
+    .whatsapp-btn i {
+      margin-right: 0;
+      font-size: 28px;
+    }
+  }
+
+  /* Desktop view - show both icon and text */
+  @media (min-width: 769px) {
+    .whatsapp-btn {
+      padding: 10px 20px;
+    }
+    
+    .whatsapp-text {
+      display: inline-block;
+    }
+    
+    .whatsapp-btn i {
+      margin-right: 8px;
+    }
+  }
+</style>
+
+
   </style>
 </head>
 
@@ -411,7 +598,7 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
       <path fill="currentColor"
         d="M12.076 9.48a.75.75 0 0 0-1.152-.96l-2.5 3A.75.75 0 0 0 9 12.75h1.899l-1.475 1.77a.75.75 0 1 0 1.152.96l2.5-3a.75.75 0 0 0-.576-1.23h-1.899z" />
       <path fill="currentColor" fill-rule="evenodd"
-        d="M9.944 3.25h1.612c1.838 0 3.294 0 4.433.153c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.069.513.107 1.091.128 1.74c.362 0 .695.005.972.042c.356.048.731.16 1.04.47c.31.309.422.684.47 1.04c.043.323.043.72.043 1.152v.09c0 .433 0 .83-.043 1.152c-.048.356-.16.731-.47 1.04c-.309.31-.684.422-1.04.47c-.277.037-.61.042-.972.043c-.021.648-.06 1.226-.128 1.739c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c1.14-.153 2.595-.153 4.433-.153M5.71 4.89c-1.006.135-1.586.389-2.01.812c-.422.423-.676 1.003-.811 2.009c-.138 1.028-.14 2.382-.14 4.289c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008c.423.423 1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h1.5c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812c.423-.423.677-1.003.812-2.009c.138-1.028.14-2.382.14-4.289c0-1.907-.002-3.261-.14-4.29c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14H10c-1.907 0-3.261.002-4.29.14m15.039 5.87v2.48c.095-.004.176-.01.247-.02a.702.702 0 0 0 .177-.042l.003-.001l.001-.003a.702.702 0 0 0 .042-.177c.028-.21.03-.504.03-.997s-.002-.787-.03-.997a.702.702 0 0 0-.042-.177l-.001-.003l-.003-.001a.702.702 0 0 0-.177-.042a2.865 2.865 0 0 0-.247-.02"
+        d="M9.944 3.25h1.612c1.838 0 3.294 0 4.433.153c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.069.513.107 1.091.128 1.74c.362 0 .695.005.972.042c.356.048.731.16 1.04.47c.31.309.422.684.47 1.04c.043.323.043.72.043 1.152v.09c0 .433 0 .83-.043 1.152c-.048.356-.16.731-.47 1.04c-.309.31-.684.422-1.04.47c-.277.037-.61.042-.972.043c-.021.648-.06 1.226-.128 1.739c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c1.14-.153 2.595-.153 4.433-.153m5.71 1.64a5.486 5.486 0 0 1-.027.1c-.163.594-.425 1.202-.711 1.636c-.256.388-.752.78-1.164 1.076a9.51 9.51 0 0 1-.902.56c-.228.132-.433.25-.63.38c-.432.286-.766.593-.991 1.056a.665.665 0 0 0-.035.49c.075.272.126.578.126.889c.002.649-.328 1.176-.753 1.518a2.41 2.41 0 0 1-1.521.526c-2.455-.027-3.965-2.02-4.164-4.236c-.08-.881-.466-1.773-.954-2.552a8.838 8.838 0 0 0-1.296-1.62m1.167-.956a10.49 10.49 0 0 1 1.4 1.779c.558.89 1.069 2.012 1.177 3.214c.15 1.68 1.213 2.854 2.686 2.87a.91.91 0 0 0 .563-.194c.146-.117.196-.24.195-.346c0-.156-.026-.328-.072-.495a2.163 2.163 0 0 1 .131-1.542c.385-.794.956-1.285 1.514-1.653c.239-.158.487-.3.71-.43l.09-.05c.255-.148.48-.28.683-.427c.431-.31.704-.557.787-.684c.183-.276.388-.734.518-1.207c.103-.374.131-.662.122-.84A9.207 9.207 0 0 0 12 2.75a9.207 9.207 0 0 0-5.255 1.637M22.68 13.24c.047-.407.071-.82.071-1.24c0-5.937-4.813-10.75-10.75-10.75S1.25 6.063 1.25 12S6.063 22.75 12 22.75c5.46 0 9.97-4.071 10.659-9.344a2.89 2.89 0 0 1 .048-.156zm-2.774 3.567c-.596.218-1.314.348-2.179.357h-.031l-.09.003a7.68 7.68 0 0 0-1.477.208c-.902.221-1.693.62-2.029 1.252c-.456.859-.39 1.793-.22 2.432a9.261 9.261 0 0 0 6.026-4.252"
         clip-rule="evenodd" />
     </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" id="smart-vacuum-cleaner-outline" viewBox="0 0 24 24">
@@ -423,7 +610,7 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
       <path fill="currentColor"
         d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2" />
       <path fill="currentColor" fill-rule="evenodd"
-        d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827c.26.02.506.045.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c.233-.031.48-.056.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812c-.423.423-.677 1.003-.812 2.009c-.023.17-.042.35-.058.539h18.336c-.016-.19-.035-.369-.058-.54c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008c-.423.423-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812c-.423-.423-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z"
+        d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827c.26.02.506.045.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c.233-.031.48-.056.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812c-.423.423-.677 1.003-.812 2.009c-.023.17-.042.35-.058.539h18.336c-.016-.19-.035-.369-.058-.54c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M12 2.75c-1.74 0-3.167.153-4.252.336c-1.207.204-1.46.28-1.726.608c-.262.322-.287.628-.234 1.983c.09 2.258.388 4.696 1.31 6.55c.456.914 1.052 1.662 1.828 2.182c.77.517 1.765.841 3.074.841c1.31 0 2.304-.324 3.075-.841c.776-.52 1.371-1.268 1.826-2.183c.923-1.853 1.221-4.29 1.31-6.55c.055-1.354.03-1.66-.232-1.982c-.266-.328-.52-.404-1.727-.608A25.627 25.627 0 0 0 12 2.75"
         clip-rule="evenodd" />
     </symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" id="point-on-map-outline" viewBox="0 0 24 24">
@@ -479,6 +666,18 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
     </symbol>
   </svg>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+<!-- WhatsApp Floating Button HTML -->
+<a href="https://wa.me/14387636430" class="whatsapp-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-text" data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+</a>
+
+<!-- Font Awesome for WhatsApp icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <header id="header">
     <nav id="primary-header" class="navbar navbar-expand-lg py-3">
       <div class="container">
@@ -517,6 +716,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                 <a class="nv" href="gallery.html">Gallery</a>
               </li>
               
+              <li class="nav-item px-3 language-switcher">
+                <button class="language-btn active" data-lang="en">EN</button>
+                <span style="color: #333;">/</span>
+                <button class="language-btn" data-lang="fr">FR</button>
+              </li>
+
+
               <!-- Theme Toggle Button -->
               <li class="nav-item px-3">
                 <button class="theme-toggle btn btn-link" aria-label="Toggle theme">
@@ -558,8 +764,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h1 class="display-4 fw-bold mb-4" >Our Professional Cleaning Services</h1>
-          <a href="contact.html" class="btn btn-primary btn-lg mt-3" style="background-color: #0d6efd;">Get a Free Quote</a>
+          <h1 class="display-4 fw-bold mb-4" data-en="Our Professional Cleaning Services" data-fr="Nos Services de Nettoyage Professionnels">Our Professional Cleaning Services</h1>
+          <a href="contact.html" class="btn btn-primary btn-lg mt-3" style="background-color: #0d6efd;" data-en="Get a Free Quote" data-fr="Obtenir un Devis Gratuit">Get a Free Quote</a>
         </div>
       </div>
     </div>
@@ -569,8 +775,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
   <section class="service-feature py-5">
     <div class="container">
       <div class="section-title text-center">
-        <h2 class="display-5 fw-bold" style="color: #0d6efd;">Our Comprehensive Services</h2>
-        <p class="lead" style="color: black;"> We offer a wide range of professional cleaning solutions</p>
+        <h2 class="display-5 fw-bold" style="color: #0d6efd;" data-en="Our Comprehensive Services" data-fr="Nos Services Complets">Our Comprehensive Services</h2>
+        <p class="lead" style="color: black;" data-en="We offer a wide range of professional cleaning solutions" data-fr="Nous offrons une large gamme de solutions de nettoyage professionnelles">We offer a wide range of professional cleaning solutions</p>
       </div>
 
       <div class="row mt-5">
@@ -583,13 +789,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                   <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3" style="color: #0d6efd;">Residential Cleaning</h3>
-              <p class="mb-4">Our comprehensive home cleaning services ensure every corner of your living space is spotless, fresh, and hygienic.</p>
+              <h3 class="h4 fw-bold mb-3" style="color: #0d6efd;" data-en="Residential Cleaning" data-fr="Nettoyage Résidentiel">Residential Cleaning</h3>
+              <p class="mb-4" data-en="Our comprehensive home cleaning services ensure every corner of your living space is spotless, fresh, and hygienic." data-fr="Nos services complets de nettoyage domestique garantissent que chaque coin de votre espace de vie est impeccable, frais et hygiénique.">Our comprehensive home cleaning services ensure every corner of your living space is spotless, fresh, and hygienic.</p>
               <ul class="text-start ps-4">
-                <li>Deep cleaning</li>
-                <li>Regular maintenance</li>
-                <li>Customized plans</li>
-                <li>Eco-friendly options</li>
+                <li data-en="Deep cleaning" data-fr="Nettoyage en profondeur">Deep cleaning</li>
+                <li data-en="Regular maintenance" data-fr="Entretien régulier">Regular maintenance</li>
+                <li data-en="Customized plans" data-fr="Plans personnalisés">Customized plans</li>
+                <li data-en="Eco-friendly options" data-fr="Options écologiques">Eco-friendly options</li>
               </ul>
             </div>
           </div>
@@ -601,16 +807,16 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
             <div class="card-body text-center p-4">
               <div class="service-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M3 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm7 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-7 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm7 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;">Commercial Cleaning</h3>
-              <p class="mb-4">Professional cleaning solutions for businesses that create a healthier, more productive work environment.</p>
+              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;" data-en="Commercial Cleaning" data-fr="Nettoyage Commercial">Commercial Cleaning</h3>
+              <p class="mb-4" data-en="Professional cleaning solutions for businesses that create a healthier, more productive work environment." data-fr="Solutions de nettoyage professionnelles pour les entreprises qui créent un environnement de travail plus sain et plus productif.">Professional cleaning solutions for businesses that create a healthier, more productive work environment.</p>
               <ul class="text-start ps-4">
-                <li>Office cleaning</li>
-                <li>Retail spaces</li>
-                <li>Medical facilities</li>
-                <li>After-hours service</li>
+                <li data-en="Office cleaning" data-fr="Nettoyage de bureaux">Office cleaning</li>
+                <li data-en="Retail spaces" data-fr="Espaces de vente au détail">Retail spaces</li>
+                <li data-en="Medical facilities" data-fr="Établissements médicaux">Medical facilities</li>
+                <li data-en="After-hours service" data-fr="Service après les heures">After-hours service</li>
               </ul>
             </div>
           </div>
@@ -625,13 +831,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                   <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;">Deep Cleaning</h3>
-              <p class="mb-4">Thorough cleaning that reaches the areas often missed during regular cleaning sessions.</p>
+              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;" data-en="Deep Cleaning" data-fr="Nettoyage en Profondeur">Deep Cleaning</h3>
+              <p class="mb-4" data-en="Thorough cleaning that reaches the areas often missed during regular cleaning sessions." data-fr="Nettoyage approfondi qui atteint les zones souvent manquées lors des séances de nettoyage régulières.">Thorough cleaning that reaches the areas often missed during regular cleaning sessions.</p>
               <ul class="text-start ps-4">
-                <li>Kitchen deep clean</li>
-                <li>Bathroom sanitation</li>
-                <li>Baseboard cleaning</li>
-                <li>Appliance cleaning</li>
+                <li data-en="Kitchen deep clean" data-fr="Nettoyage profond de la cuisine">Kitchen deep clean</li>
+                <li data-en="Bathroom sanitation" data-fr="Assainissement de la salle de bain">Bathroom sanitation</li>
+                <li data-en="Baseboard cleaning" data-fr="Nettoyage des plinthes">Baseboard cleaning</li>
+                <li data-en="Appliance cleaning" data-fr="Nettoyage des appareils">Appliance cleaning</li>
               </ul>
             </div>
           </div>
@@ -646,13 +852,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                   <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;">Move In/Out Cleaning</h3>
-              <p class="mb-4">Make your transition smooth with our specialized move-in/move-out cleaning services.</p>
+              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;" data-en="Move In/Out Cleaning" data-fr="Nettoyage Déménagement">Move In/Out Cleaning</h3>
+              <p class="mb-4" data-en="Make your transition smooth with our specialized move-in/move-out cleaning services." data-fr="Facilitez votre transition avec nos services spécialisés de nettoyage avant/après déménagement.">Make your transition smooth with our specialized move-in/move-out cleaning services.</p>
               <ul class="text-start ps-4">
-                <li>Full property cleaning</li>
-                <li>Carpet cleaning</li>
-                <li>Window washing</li>
-                <li>Appliance cleaning</li>
+                <li data-en="Full property cleaning" data-fr="Nettoyage complet de la propriété">Full property cleaning</li>
+                <li data-en="Carpet cleaning" data-fr="Nettoyage de tapis">Carpet cleaning</li>
+                <li data-en="Window washing" data-fr="Lavage de vitres">Window washing</li>
+                <li data-en="Appliance cleaning" data-fr="Nettoyage des appareils">Appliance cleaning</li>
               </ul>
             </div>
           </div>
@@ -667,13 +873,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                   <path d="M12.258 3h-8.51l-.083 2.46a.562.562 0 0 0 .245.58l.159.105c.158.106.28.223.363.345l1.735 2.47.01.012.006.006.003.002.144.214a.594.594 0 0 0 .016.019l.01.011c.03.035.062.07.098.1l.013.01c.053.045.113.082.18.11l.012.005c.079.03.165.046.253.046h5.756l-.49 1.743a.75.75 0 0 1-1.024.426l-.667-.334a.75.75 0 0 0-.67 0l-.666.334a.75.75 0 0 1-1.024-.426l-.49-1.743H2.984l.01.158c.027.177.07.34.13.487l1.541 2.8a.75.75 0 0 1-.326 1.01l-.175.085a.75.75 0 0 1-.938-.326l-1.51-2.786a2.376 2.376 0 0 1-.16-.372 2.45 2.45 0 0 1-.043-1.006l.892-11.7a.75.75 0 0 1 .74-.638h10.5a.75.75 0 0 1 .742.811l-.91 12.066a.75.75 0 0 1-.746.623H8.83a.75.75 0 0 1-.67 0l-.666.334a.75.75 0 0 1-1.023-.426l-.49-1.743H2.5a.75.75 0 0 1 0-1.5h.506l.49-1.743a.75.75 0 0 1 1.024-.426l.666.334a.75.75 0 0 0 .67 0l.666-.334a.75.75 0 0 1 1.024.426l.49 1.743h6.308a.75.75 0 0 1 0 1.5h-1.535a.75.75 0 0 1-.67 0l-.666.334a.75.75 0 0 1-1.024-.426l-.49-1.743H5.258a.75.75 0 0 1 0-1.5h6.308l.49-1.743a.75.75 0 0 1 1.024-.426l.666.334a.75.75 0 0 0 .67 0l.666-.334a.75.75 0 0 1 1.024.426l.49 1.743h.506a.75.75 0 0 1 0 1.5h-2.535z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3" style="color: #0d6efd;">Waste Management</h3>
-              <p class="mb-4">Professional waste disposal and recycling services to keep your property clean and environmentally friendly.</p>
+              <h3 class="h4 fw-bold mb-3" style="color: #0d6efd;" data-en="Waste Management" data-fr="Gestion des Déchets">Waste Management</h3>
+              <p class="mb-4" data-en="Professional waste disposal and recycling services to keep your property clean and environmentally friendly." data-fr="Services professionnels d'élimination des déchets et de recyclage pour garder votre propriété propre et écologique.">Professional waste disposal and recycling services to keep your property clean and environmentally friendly.</p>
               <ul class="text-start ps-4">
-                <li>Regular waste collection</li>
-                <li>Recycling programs</li>
-                <li>Hazardous waste disposal</li>
-                <li>Construction debris removal</li>
+                <li data-en="Regular waste collection" data-fr="Collecte régulière des déchets">Regular waste collection</li>
+                <li data-en="Recycling programs" data-fr="Programmes de recyclage">Recycling programs</li>
+                <li data-en="Hazardous waste disposal" data-fr="Élimination des déchets dangereux">Hazardous waste disposal</li>
+                <li data-en="Construction debris removal" data-fr="Enlèvement des débris de construction">Construction debris removal</li>
               </ul>
             </div>
           </div>
@@ -688,13 +894,13 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
                   <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13z"/>
                 </svg>
               </div>
-              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;">Green Cleaning</h3>
-              <p class="mb-4">Eco-friendly cleaning solutions that are safe for your family, pets, and the environment.</p>
+              <h3 class="h4 fw-bold mb-3"  style="color: #0d6efd;" data-en="Green Cleaning" data-fr="Nettoyage Écologique">Green Cleaning</h3>
+              <p class="mb-4" data-en="Eco-friendly cleaning solutions that are safe for your family, pets, and the environment." data-fr="Solutions de nettoyage écologiques sans danger pour votre famille, vos animaux de compagnie et l'environnement.">Eco-friendly cleaning solutions that are safe for your family, pets, and the environment.</p>
               <ul class="text-start ps-4">
-                <li>Non-toxic products</li>
-                <li>Sustainable methods</li>
-                <li>Reduced environmental impact</li>
-                <li>Healthier indoor air quality</li>
+                <li data-en="Non-toxic products" data-fr="Produits non toxiques">Non-toxic products</li>
+                <li data-en="Sustainable methods" data-fr="Méthodes durables">Sustainable methods</li>
+                <li data-en="Reduced environmental impact" data-fr="Impact environnemental réduit">Reduced environmental impact</li>
+                <li data-en="Healthier indoor air quality" data-fr="Meilleure qualité de l'air intérieur">Healthier indoor air quality</li>
               </ul>
             </div>
           </div>
@@ -708,49 +914,49 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="images/about-img.jpg" alt="Professional Cleaning" class="img-fluid rounded service-img">
+          <img src="images/clean4.jpeg" alt="Professional Cleaning" class="img-fluid rounded service-img">
         </div>
         <div class="col-lg-6">
           <div class="section-title">
-            <h2 class="display-5 fw-bold"  style="color: #0d6efd;">Why Choose Our Services</h2>
-            <p style="color: black;">Experience the difference with our professional approach</p>
+            <h2 class="display-5 fw-bold"  style="color: #0d6efd;" data-en="Why Choose Our Services" data-fr="Pourquoi Choisir Nos Services">Why Choose Our Services</h2>
+            <p style="color: black;" data-en="Experience the difference with our professional approach" data-fr="Découvrez la différence avec notre approche professionnelle">Experience the difference with our professional approach</p>
           </div>
           
           <div class="service-tabs mt-4">
             <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="quality-tab" data-bs-toggle="tab" data-bs-target="#quality" type="button" role="tab">Quality</button>
+                <button class="nav-link active" id="quality-tab" data-bs-toggle="tab" data-bs-target="#quality" type="button" role="tab" data-en="Quality" data-fr="Qualité">Quality</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="reliability-tab" data-bs-toggle="tab" data-bs-target="#reliability" type="button" role="tab">Reliability</button>
+                <button class="nav-link" id="reliability-tab" data-bs-toggle="tab" data-bs-target="#reliability" type="button" role="tab" data-en="Reliability" data-fr="Fiabilité">Reliability</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab">Experience</button>
+                <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" data-en="Experience" data-fr="Expérience">Experience</button>
               </li>
             </ul>
             <div class="tab-content p-4 border border-top-0 rounded-bottom" id="myTabContent">
               <div class="tab-pane fade show active" id="quality" role="tabpanel">
-                <p>We use only the highest quality cleaning products and equipment to ensure exceptional results every time. Our attention to detail sets us apart from the competition.</p>
+                <p data-en="We use only the highest quality cleaning products and equipment to ensure exceptional results every time. Our attention to detail sets us apart from the competition." data-fr="Nous n'utilisons que des produits et équipements de nettoyage de la plus haute qualité pour garantir des résultats exceptionnels à chaque fois. Notre souci du détail nous distingue de la concurrence.">We use only the highest quality cleaning products and equipment to ensure exceptional results every time. Our attention to detail sets us apart from the competition.</p>
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Premium cleaning products</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Advanced cleaning equipment</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Meticulous attention to detail</li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Premium cleaning products" data-fr="Produits de nettoyage premium">Premium cleaning products</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Advanced cleaning equipment" data-fr="Équipement de nettoyage avancé">Advanced cleaning equipment</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Meticulous attention to detail" data-fr="Attention méticuleuse aux détails">Meticulous attention to detail</span></li>
                 </ul>
               </div>
               <div class="tab-pane fade" id="reliability" role="tabpanel">
-                <p>When we schedule a cleaning, you can count on us to be there. Our reliable team shows up on time and completes the job to your satisfaction.</p>
+                <p data-en="When we schedule a cleaning, you can count on us to be there. Our reliable team shows up on time and completes the job to your satisfaction." data-fr="Lorsque nous programmons un nettoyage, vous pouvez compter sur nous. Notre équipe fiable arrive à l'heure et termine le travail à votre satisfaction.">When we schedule a cleaning, you can count on us to be there. Our reliable team shows up on time and completes the job to your satisfaction.</p>
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> On-time service guarantee</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Consistent results</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Flexible scheduling</li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="On-time service guarantee" data-fr="Garantie de service à l'heure">On-time service guarantee</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Consistent results" data-fr="Résultats constants">Consistent results</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Flexible scheduling" data-fr="Planification flexible">Flexible scheduling</span></li>
                 </ul>
               </div>
               <div class="tab-pane fade" id="experience" role="tabpanel">
-                <p>With years of experience in the cleaning industry, our trained professionals know exactly how to handle any cleaning challenge.</p>
+                <p data-en="With years of experience in the cleaning industry, our trained professionals know exactly how to handle any cleaning challenge." data-fr="Avec des années d'expérience dans l'industrie du nettoyage, nos professionnels formés savent exactement comment relever tout défi de nettoyage.">With years of experience in the cleaning industry, our trained professionals know exactly how to handle any cleaning challenge.</p>
                 <ul class="list-unstyled">
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Highly trained staff</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Industry best practices</li>
-                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Continuous training programs</li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Highly trained staff" data-fr="Personnel hautement qualifié">Highly trained staff</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Industry best practices" data-fr="Meilleures pratiques de l'industrie">Industry best practices</span></li>
+                  <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> <span data-en="Continuous training programs" data-fr="Programmes de formation continue">Continuous training programs</span></li>
                 </ul>
               </div>
             </div>
@@ -764,8 +970,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
   <section id="ben" class="service-benefits py-5">
     <div class="container">
       <div class="section-title text-center">
-        <h2 class="display-5 fw-bold"  style="color: #0d6efd;">Benefits of Professional Cleaning</h2>
-        <p style="color: black;">Discover how our services can improve your life</p>
+        <h2 class="display-5 fw-bold"  style="color: #0d6efd;" data-en="Benefits of Professional Cleaning" data-fr="Avantages du Nettoyage Professionnel">Benefits of Professional Cleaning</h2>
+        <p style="color: black;" data-en="Discover how our services can improve your life" data-fr="Découvrez comment nos services peuvent améliorer votre vie">Discover how our services can improve your life</p>
       </div>
       
       <div class="row mt-5">
@@ -777,8 +983,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold"  style="color: #0d6efd;">Time Savings</h4>
-              <p>Free up your valuable time by letting our professionals handle the cleaning.</p>
+              <h4 class="h5 fw-bold"  style="color: #0d6efd;" data-en="Time Savings" data-fr="Gain de Temps">Time Savings</h4>
+              <p data-en="Free up your valuable time by letting our professionals handle the cleaning." data-fr="Libérez votre temps précieux en laissant nos professionnels s'occuper du nettoyage.">Free up your valuable time by letting our professionals handle the cleaning.</p>
             </div>
           </div>
         </div>
@@ -791,8 +997,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold"  style="color: #0d6efd;">Healthier Environment</h4>
-              <p>Reduce allergens and bacteria with our thorough cleaning techniques.</p>
+              <h4 class="h5 fw-bold"  style="color: #0d6efd;" data-en="Healthier Environment" data-fr="Environnement Plus Sain">Healthier Environment</h4>
+              <p data-en="Reduce allergens and bacteria with our thorough cleaning techniques." data-fr="Réduisez les allergènes et les bactéries avec nos techniques de nettoyage approfondies.">Reduce allergens and bacteria with our thorough cleaning techniques.</p>
             </div>
           </div>
         </div>
@@ -805,8 +1011,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold"  style="color: #0d6efd;">Professional Results</h4>
-              <p>Enjoy a level of cleanliness that's difficult to achieve on your own.</p>
+              <h4 class="h5 fw-bold"  style="color: #0d6efd;" data-en="Professional Results" data-fr="Résultats Professionnels">Professional Results</h4>
+              <p data-en="Enjoy a level of cleanliness that's difficult to achieve on your own." data-fr="Profitez d'un niveau de propreté difficile à atteindre par vous-même.">Enjoy a level of cleanliness that's difficult to achieve on your own.</p>
             </div>
           </div>
         </div>
@@ -819,8 +1025,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold "  style="color: #0d6efd;">Customized Plans</h4>
-              <p>We tailor our services to meet your specific needs and preferences.</p>
+              <h4 class="h5 fw-bold "  style="color: #0d6efd;" data-en="Customized Plans" data-fr="Plans Personnalisés">Customized Plans</h4>
+              <p data-en="We tailor our services to meet your specific needs and preferences." data-fr="Nous adaptons nos services à vos besoins et préférences spécifiques.">We tailor our services to meet your specific needs and preferences.</p>
             </div>
           </div>
         </div>
@@ -833,8 +1039,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold" style="color: #0d6efd;">Eco-Friendly Options</h4>
-              <p>Choose green cleaning solutions that are safe for your family and the planet.</p>
+              <h4 class="h5 fw-bold" style="color: #0d6efd;" data-en="Eco-Friendly Options" data-fr="Options Écologiques">Eco-Friendly Options</h4>
+              <p data-en="Choose green cleaning solutions that are safe for your family and the planet." data-fr="Choisissez des solutions de nettoyage écologiques sans danger pour votre famille et la planète.">Choose green cleaning solutions that are safe for your family and the planet.</p>
             </div>
           </div>
         </div>
@@ -847,8 +1053,8 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
               </svg>
             </div>
             <div>
-              <h4 class="h5 fw-bold" style="color: #0d6efd;">Stress Reduction</h4>
-              <p>Eliminate the hassle and stress of cleaning from your busy schedule.</p>
+              <h4 class="h5 fw-bold" style="color: #0d6efd;" data-en="Stress Reduction" data-fr="Réduction du Stress">Stress Reduction</h4>
+              <p data-en="Eliminate the hassle and stress of cleaning from your busy schedule." data-fr="Éliminez les tracas et le stress du nettoyage de votre emploi du temps chargé.">Eliminate the hassle and stress of cleaning from your busy schedule.</p>
             </div>
           </div>
         </div>
@@ -864,83 +1070,90 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
             <h6 class="widget-title pb-2 fw-semibold" id="bon">Boniette facility service</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="about.html">About Us</a>
+                <a href="about.html" data-en="About Us" data-fr="À Propos de Nous">About Us</a>
               </li>
               <li class="pb-2">
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Our Services</a>
+                <a href="service.html" data-en="Our Services" data-fr="Nos Services">Our Services</a>
               </li>
               <li class="pb-2">
-                <a href="blog.html">blogs</a>
+                <a href="blog.html" data-en="blogs" data-fr="Blogues">blogs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" data-en="Contact Us" data-fr="Contactez-Nous">Contact Us</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="bon">Services</h6>
+            <h6 class="widget-title pb-2 fw-semibold" id="bon" data-en="Services" data-fr="Services">Services</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="service.html">Deep cleaning</a>
+                <a href="service.html" data-en="Deep cleaning" data-fr="Nettoyage en profondeur">Deep cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Window cleaning</a>
+                <a href="service.html" data-en="Window cleaning" data-fr="Nettoyage de vitres">Window cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Office cleaning</a>
+                <a href="service.html" data-en="Office cleaning" data-fr="Nettoyage de bureaux">Office cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Move in/ Move out cleaning</a>
+                <a href="service.html" data-en="Move in/ Move out cleaning" data-fr="Nettoyage avant/après déménagement">Move in/ Move out cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Green cleaning</a>
+                <a href="service.html" data-en="Green cleaning" data-fr="Nettoyage écologique">Green cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">commercial cleaning</a>
+                <a href="service.html" data-en="commercial cleaning" data-fr="Nettoyage commercial">commercial cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Waste management </a>
+                <a href="service.html" data-en="Waste management" data-fr="Gestion des déchets">Waste management</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="bon">Help</h6>
+            <h6 class="widget-title pb-2 fw-semibold" id="bon" data-en="Help" data-fr="Aide">Help</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="faq.html">FAQs</a>
+                <a href="faq.html" data-en="FAQs" data-fr="FAQ">FAQs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Get in touch</a>
+                <a href="contact.html" data-en="Get in touch" data-fr="Contactez-nous">Get in touch</a>
               </li>
               <li class="pb-2">
-                <a href="about.html">Info</a>
+                <a href="about.html" data-en="Info" data-fr="Informations">Info</a>
               </li>
               <li class="pb-2">
-                <a href="#">Privacy Policy</a>
+                <a href="#" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="bon">Book your service</h6>
-            <p id="bon">Get best dedicated team of professionals for your service.</p>
-            <a id="bon" class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;">Book Service</a>
-            <h5  id="bon" class="text-capitalize fw-light mt-3">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
+          <div class="footer-menu" >
+            <h6  id="fop" class="widget-title pb-2 fw-semibold" data-en="Book your service" data-fr="Réservez votre service">Book your service</h6>
+            <p  id="fop" data-en="Get best dedicated team of professionals for your service." data-fr="Obtenez la meilleure équipe de professionnels dédiés pour votre service.">Get best dedicated team of professionals for your service.</p>
+            <a  id="fop" class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" data-en="Book Service" data-fr="Réserver un Service">Book Service</a>
+            <a href="https://wa.me/+14387636430" class="footer-whatsapp-btn" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              <span data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+            </a>
+         
           </div>
         </div>
+    
       </div>
     </div>
+
+   
     <div id="fool" class="bg-gray">
       <div  class="container footer-bottom d-md-flex text-center justify-content-between py-4">
-        <p id="bon" class="mb-0">© 2025 Boniette facility service  - All rights reserved</p>
+        <p id="bon">© 2025 Boniette facility service  - All rights reserved</p>
       </div>
     </div>
   </footer>
@@ -970,6 +1183,7 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   
   <script>
     // Dark/Light mode toggle functionality
@@ -1040,6 +1254,44 @@ body.dark-mode .navbar-nav .nav-item .nv:hover {
           }
         }
       });
+
+      // Language switcher functionality
+      const languageBtns = document.querySelectorAll('.language-btn');
+      
+      languageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          languageBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const lang = this.getAttribute('data-lang');
+          updateLanguage(lang);
+        });
+      });
+
+      function updateLanguage(lang) {
+        // Get all elements with data-en and data-fr attributes
+        const elements = document.querySelectorAll('[data-en], [data-fr]');
+        
+        elements.forEach(element => {
+          if (element.hasAttribute(`data-${lang}`)) {
+            const text = element.getAttribute(`data-${lang}`);
+            
+            // For input elements (like placeholders)
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = text;
+            } 
+            // For buttons and other elements
+            else {
+              element.textContent = text;
+            }
+          }
+        });
+      }
+
+      // Initialize with English
+      updateLanguage('en');
     });
   </script>
 </body>

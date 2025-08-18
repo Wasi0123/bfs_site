@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>CleanCity Cleaning Services</title>
@@ -19,6 +19,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <!-- Font Awesome for WhatsApp icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* Dark Mode Styles */
     body.dark-mode {
@@ -26,32 +28,32 @@
       color: #ffffff;
     }
     /* Add this to your existing dark mode styles */
-body.dark-mode .section-title p,
-body.dark-mode .section-title h3.news,
-body.dark-mode .news {
-  color: #0d6efd !important;
-}
-body.dark-mode .nv {
-  color: #0d6efd !important;
-}
-.section-title {
-  position: relative;
-  padding-bottom: 15px;
-}
+    body.dark-mode .section-title p,
+    body.dark-mode .section-title h3.news,
+    body.dark-mode .news {
+      color: #0d6efd !important;
+    }
+    body.dark-mode .nv {
+      color: #0d6efd !important;
+    }
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+    }
 
-.section-title:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: #0d6efd;
-}
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #0d6efd;
+    }
 
-body.dark-mode .section-title:after {
-  background-color: #0d6efd; /* Keep the underline blue in dark mode */
-}
+    body.dark-mode .section-title:after {
+      background-color: #0d6efd; /* Keep the underline blue in dark mode */
+    }
     body.dark-mode #header,
     body.dark-mode #footer,
     body.dark-mode .offcanvas {
@@ -264,12 +266,138 @@ body.dark-mode .section-title:after {
     }
     /* Nav item styling - applies to all nav items */
 
-/* Dark mode overrides - ensures colors stay the same */
-body.dark-mode .nav-item .nv,
-body.dark-mode .nav-item.active .nv,
-body.dark-mode .nav-item:hover .nv {
-  color: #0d6efd !important; /* Same blue in dark mode */
-}
+    /* Dark mode overrides - ensures colors stay the same */
+    body.dark-mode .nav-item .nv,
+    body.dark-mode .nav-item.active .nv,
+    body.dark-mode .nav-item:hover .nv {
+      color: #0d6efd !important; /* Same blue in dark mode */
+    }
+
+    /* WhatsApp Button Styles */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-btn i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .whatsapp-text {
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+      }
+      
+      .whatsapp-text {
+        display: none;
+      }
+      
+      .whatsapp-btn i {
+        margin-right: 0;
+        font-size: 28px;
+      }
+    }
+
+    /* Language Switcher Styles */
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+    }
+
+    .language-btn {
+      background: none;
+      border: none;
+      color: #333;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      margin: 0 2px;
+      transition: all 0.3s ease;
+    }
+
+    .language-btn.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    body.dark-mode .language-btn {
+      color: #ffffff;
+    }
+
+    body.dark-mode .language-btn.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    /* Footer WhatsApp Button */
+    .footer-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background-color: #128C7E;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .footer-whatsapp-btn i {
+      margin-right: 8px;
+    }
+
+    /* Blog specific styles */
+    body.dark-mode #blogs {
+      background-color: #1e1e1e !important;
+    }
+
+    body.dark-mode .card-item {
+      background-color: #1e1e1e;
+    }
+
+    body.dark-mode .card-item h6 a {
+      color: #0d6efd !important;
+    }
+
+    body.dark-mode .card-item p {
+      color: #ffffff !important;
+    }
   </style>
 </head>
 
@@ -295,6 +423,12 @@ body.dark-mode .nav-item:hover .nv {
     </symbol>
   </svg>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/14387636430" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text" data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+  </a>
+
   <header id="header">
     <nav id="primary-header" class="navbar navbar-expand-lg py-3">
       <div class="container">
@@ -315,22 +449,29 @@ body.dark-mode .nav-item:hover .nv {
           <div class="offcanvas-body align-items-center justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item px-3" >
-                <a class="nv" href="index.html">Home</a>
+                <a class="nv" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
               </li>
               <li class="nav-item px-3" >
-                <a class="nv" href="about.html">About Us</a>
+                <a class="nv" href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
               </li>
               <li class="nav-item px-3" >
-                <a class="nv" aria-current="page" href="service.html">Our Services</a>
+                <a class="nv" aria-current="page" href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
               </li>
-              <li class="nav-item px-3 active" style="color: #0d6efd;"> <!-- Removed inline style, added active class -->
-                <a class="nv" aria-current="page" href="blog.html">Our Blog</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nv" href="contact.html">Book Us</a>
+              <li class="nav-item px-3 active" style="color: #0d6efd;">
+                <a class="nv" aria-current="page" href="blog.html" data-en="Our Blog" data-fr="Notre blog">Our Blog</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nv" href="gallery.html">Gallery</a>
+                <a class="nv" href="contact.html" data-en="Book Us" data-fr="Réserver">Contact Us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nv" href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
+              </li>
+              
+              <!-- Language Switcher -->
+              <li class="nav-item px-3 language-switcher">
+                <button class="language-btn active" data-lang="en">EN</button>
+                <span style="color: #333;">/</span>
+                <button class="language-btn" data-lang="fr">FR</button>
               </li>
               
               <!-- Dark/Light mode toggle button -->
@@ -354,7 +495,7 @@ body.dark-mode .nav-item:hover .nv {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
                   <li class="position-relative d-flex align-items-center p-0">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-en="Search" data-fr="Rechercher">
                     <button class="btn btn-primary position-absolute end-0" type="submit">
                       <svg class="search" width="24" height="24">
                         <use xlink:href="#search"></use>
@@ -374,8 +515,8 @@ body.dark-mode .nav-item:hover .nv {
     <div class="container">
       <div class="mb-5 d-flex flex-wrap align-items-center justify-content-between">
         <div class="section-title">
-          <p class="mb-2 fs-4 text-capitalize" style="color: #2f63b1;">Blogs</p>
-          <h3 class="news" style="color: #0d6efd;">News & Articles</h3>
+          <p class="mb-2 fs-4 text-capitalize" style="color: #2f63b1;" data-en="Blogs" data-fr="Blogues">Blogs</p>
+          <h3 class="news" style="color: #0d6efd;" data-en="News & Articles" data-fr="Nouvelles et articles">News & Articles</h3>
         </div>
       </div>
       <div class="post-grid row mt-4">
@@ -388,9 +529,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog-.html">Why are we best cleaning company</a>
+                <a href="blog-.html" data-en="Why are we best cleaning company" data-fr="Pourquoi sommes-nous la meilleure entreprise de nettoyage">Why are we best cleaning company</a>
               </h6>
-              <p>In addition to having state of the art and eco-friendly cleaning supplies we also have experience, dedicated and amazing employees to handle the job. <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
+              <p data-en="In addition to having state of the art and eco-friendly cleaning supplies we also have experience, dedicated and amazing employees to handle the job."
+                 data-fr="En plus d'avoir des fournitures de nettoyage écologiques et de pointe, nous avons également des employés expérimentés, dévoués et extraordinaires pour effectuer le travail.">
+                In addition to having state of the art and eco-friendly cleaning supplies we also have experience, dedicated and amazing employees to handle the job. <a href="blog-single.html" class="text-decoration-underline"><em>Read more</em></a>
               </p>
             </div>
           </div>
@@ -404,9 +547,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog-.html">Top 10 best cleaning services</a>
+                <a href="blog-.html" data-en="Top 10 best cleaning services" data-fr="Top 10 des meilleurs services de nettoyage">Top 10 best cleaning services</a>
               </h6>
-              <p>we offer office cleaning, kitchen cleaning, window cleaning. green cleaning, move in /move out, watemanagement, disinfection 
+              <p data-en="we offer office cleaning, kitchen cleaning, window cleaning. green cleaning, move in /move out, watemanagement, disinfection" 
+                 data-fr="nous proposons le nettoyage de bureaux, le nettoyage de cuisines, le nettoyage de vitres, le nettoyage écologique, le nettoyage d'emménagement/déménagement, la gestion des déchets, la désinfection">
+                we offer office cleaning, kitchen cleaning, window cleaning. green cleaning, move in /move out, watemanagement, disinfection 
               </p>
             </div>
           </div>
@@ -420,9 +565,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog.html">Best vacuum cleaners in 2023</a>
+                <a href="blog.html" data-en="Best vacuum cleaners in 2023" data-fr="Meilleurs aspirateurs en 2023">Best vacuum cleaners in 2023</a>
               </h6>
-              <p>We have state of the art vacuum cleaners from the best manufacturers in the world thus providing the best cleaning service.
+              <p data-en="We have state of the art vacuum cleaners from the best manufacturers in the world thus providing the best cleaning service."
+                 data-fr="Nous disposons d'aspirateurs de pointe des meilleurs fabricants du monde, offrant ainsi le meilleur service de nettoyage.">
+                We have state of the art vacuum cleaners from the best manufacturers in the world thus providing the best cleaning service.
             </div>
           </div>
         </div>
@@ -435,9 +582,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog.html">Kitchen cleaning services</a>
+                <a href="blog.html" data-en="Kitchen cleaning services" data-fr="Services de nettoyage de cuisine">Kitchen cleaning services</a>
               </h6>
-              <p>We are the best cleaning company offering exceptional Kitchen cleaning for your every need... 
+              <p data-en="We are the best cleaning company offering exceptional Kitchen cleaning for your every need..." 
+                 data-fr="Nous sommes la meilleure entreprise de nettoyage offrant un nettoyage de cuisine exceptionnel pour tous vos besoins...">
+                We are the best cleaning company offering exceptional Kitchen cleaning for your every need... 
               </p>
             </div>
           </div>
@@ -451,9 +600,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog.html">we are Best cleaners for your window</a>
+                <a href="blog.html" data-en="we are Best cleaners for your window" data-fr="Nous sommes les meilleurs nettoyeurs pour vos fenêtres">we are Best cleaners for your window</a>
               </h6>
-              <p>We have good and powerfull eco-friendly product when will leave you windows spotless in addition we have trained and qualified personals for the job.
+              <p data-en="We have good and powerfull eco-friendly product when will leave you windows spotless in addition we have trained and qualified personals for the job."
+                 data-fr="Nous avons des produits écologiques bons et puissants qui laisseront vos fenêtres impeccables, en plus nous avons du personnel formé et qualifié pour le travail.">
+                We have good and powerfull eco-friendly product when will leave you windows spotless in addition we have trained and qualified personals for the job.
               </p>
             </div>
           </div>
@@ -467,9 +618,11 @@ body.dark-mode .nav-item:hover .nv {
             </div>
             <div class="card-body p-0 mt-2">
               <h6 class="mt-3">
-                <a href="blog-.html">Top 10 ways to keep city clean</a>
+                <a href="blog-.html" data-en="Top 10 ways to keep city clean" data-fr="Top 10 des moyens de garder la ville propre">Top 10 ways to keep city clean</a>
               </h6>
-              <p>Reduce littering;Use trash bins and discourage littering in public areas in your community.
+              <p data-en="Reduce littering;Use trash bins and discourage littering in public areas in your community."
+                 data-fr="Réduisez les déchets ; utilisez les poubelles et découragez les déchets dans les espaces publics de votre communauté.">
+                Reduce littering;Use trash bins and discourage littering in public areas in your community.
               </p>
             </div>
           </div>
@@ -486,7 +639,7 @@ body.dark-mode .nav-item:hover .nv {
             <use xlink:href="#call-chat-rounded-outline" />
           </svg>
           <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Give Us Call</h5>
+            <h5 class="text-light mb-0" data-en="Give Us Call" data-fr="Appelez-nous">Give Us Call</h5>
             <h5 class="fw-light text-light">+1-438-763-6430</h5>
           </div>
         </div>
@@ -504,7 +657,7 @@ body.dark-mode .nav-item:hover .nv {
             <use xlink:href="#pen-new-round-outline" />
           </svg>
           <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Contact Us</h5>
+            <h5 class="text-light mb-0" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h5>
             <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
           </div>
         </div>
@@ -520,76 +673,80 @@ body.dark-mode .nav-item:hover .nv {
             <h6 class="widget-title pb-2 fw-semibold">Boniette facility service</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="about.html">About Us</a>
+                <a href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
               </li>
               <li class="pb-2">
-                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Our Services</a>
+                <a href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
               </li>
               <li class="pb-2">
-                <a href="blog.html">blogs</a>
+                <a href="blog.html" data-en="blogs" data-fr="Blogues">blogs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Services</h6>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Services" data-fr="Services">Services</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="service.html">Deep cleaning</a>
+                <a href="service.html" data-en="Deep cleaning" data-fr="Nettoyage en profondeur">Deep cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Window cleaning</a>
+                <a href="service.html" data-en="Window cleaning" data-fr="Nettoyage de vitres">Window cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Office cleaning</a>
+                <a href="service.html" data-en="Office cleaning" data-fr="Nettoyage de bureau">Office cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Move in/ Move out cleaning</a>
+                <a href="service.html" data-en="Move in/ Move out cleaning" data-fr="Nettoyage d'emménagement/déménagement">Move in/ Move out cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Green cleaning</a>
+                <a href="service.html" data-en="Green cleaning" data-fr="Nettoyage écologique">Green cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">commercial cleaning</a>
+                <a href="service.html" data-en="commercial cleaning" data-fr="Nettoyage commercial">commercial cleaning</a>
               </li>
               <li class="pb-2">
-                <a href="service.html">Waste management </a>
+                <a href="service.html" data-en="Waste management" data-fr="Gestion des déchets">Waste management</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Help</h6>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Help" data-fr="Aide">Help</h6>
             <ul class="menu-list d-flex flex-column list-unstyled">
               <li class="pb-2">
-                <a href="faq.html">FAQs</a>
+                <a href="index.html" data-en="FAQs" data-fr="FAQ">FAQs</a>
               </li>
               <li class="pb-2">
-                <a href="contact.html">Get in touch</a>
+                <a href="contact.html" data-en="Get in touch" data-fr="Contactez-nous">Get in touch</a>
               </li>
               <li class="pb-2">
-                <a href="about.html">Info</a>
+                <a href="about.html" data-en="Info" data-fr="Info">Info</a>
               </li>
               <li class="pb-2">
-                <a href="#">Privacy Policy</a>
+                <a href="#" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
           <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold">Book your service</h6>
-            <p>Get best dedicated team of professionals for your service.</p>
-            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;">Book Service</a>
-            <h5 class="text-capitalize fw-light mt-3">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
+            <h6 class="widget-title pb-2 fw-semibold" data-en="Book your service" data-fr="Réservez votre service">Book your service</h6>
+            <p data-en="Get best dedicated team of professionals for your service." data-fr="Obtenez la meilleure équipe de professionnels pour votre service.">Get best dedicated team of professionals for your service.</p>
+            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" data-en="Book Service" data-fr="Réserver un service">Book Service</a>
+            <a href="https://wa.me/14387636430" class="footer-whatsapp-btn" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              <span data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+            </a>
+           
           </div>
         </div>
       </div>
@@ -654,6 +811,59 @@ body.dark-mode .nav-item:hover .nv {
           document.body.classList.toggle('dark-mode', e.matches);
         }
       });
+      
+      // Language switcher functionality
+      const languageBtns = document.querySelectorAll('.language-btn');
+      let currentLang = localStorage.getItem('language') || 'en';
+      
+      // Set initial language
+      setLanguage(currentLang);
+      
+      // Highlight current language button
+      languageBtns.forEach(btn => {
+        if (btn.dataset.lang === currentLang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Language switcher event listeners
+      languageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.dataset.lang;
+          if (lang !== currentLang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            setLanguage(lang);
+            
+            // Update active button
+            languageBtns.forEach(b => {
+              if (b.dataset.lang === lang) {
+                b.classList.add('active');
+              } else {
+                b.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+      
+      function setLanguage(lang) {
+        // Update all elements with data-en and data-fr attributes
+        document.querySelectorAll('[data-en], [data-fr]').forEach(element => {
+          if (element.dataset[lang]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = element.dataset[lang];
+            } else {
+              element.textContent = element.dataset[lang];
+            }
+          }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+      }
     });
   </script>
 </body>

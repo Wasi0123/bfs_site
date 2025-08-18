@@ -338,6 +338,379 @@
         grid-template-columns: 1fr;
       }
     }
+
+
+
+
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    
+    body.dark-mode #header,
+    body.dark-mode #footer,
+    body.dark-mode .offcanvas {
+      background-color: #121212 !important;
+      border-color: #333;
+    }
+    
+    body.dark-mode .navbar,
+    body.dark-mode .offcanvas-header {
+      background-color: #121212 !important;
+    }
+    
+    body.dark-mode .nav-link,
+    body.dark-mode .navbar-brand,
+    body.dark-mode .offcanvas-body .nav-item a,
+    body.dark-mode .card-body,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6,
+    body.dark-mode p,
+    body.dark-mode .section-title p,
+    body.dark-mode .section-title h3.news,
+    body.dark-mode .news {
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+    
+    body.dark-mode .bg-gray {
+      background-color: #1e1e1e !important;
+    }
+    
+    body.dark-mode .footer-menu a {
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .btn-primary {
+      background-color: #0d6efd !important;
+      border-color: #0d6efd !important;
+    }
+    
+    body.dark-mode .gallery-section {
+      background-color:  #1e1e1e !important;
+    }
+    
+    body.dark-mode .gallery-item {
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
+    
+    body.dark-mode .gallery-item:hover {
+      box-shadow: 0 10px 20px rgba(255,255,255,0.15);
+    }
+    
+    /* Dark mode toggle button */
+    .dark-mode-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .dark-mode-toggle svg {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease;
+    }
+    
+    .dark-mode-toggle:hover svg {
+      transform: scale(1.1);
+    }
+    
+    .dark-mode-icon {
+      display: none;
+    }
+    
+    body.dark-mode .dark-mode-icon {
+      display: block;
+    }
+    
+    body.dark-mode .light-mode-icon {
+      display: none;
+    }
+    
+    body:not(.dark-mode) .dark-mode-icon {
+      display: none;
+    }
+    
+    body:not(.dark-mode) .light-mode-icon {
+      display: block;
+    }
+    
+    .nv {
+      font-size: 18px;
+      
+    }
+    
+    body.dark-mode .nv {
+      color: #0d6efd !important;
+    }
+    
+    .nav-item.active .nv {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    /* Gallery Styles */
+    .gallery-section {
+      padding: 80px 0;
+      background-color: #eef1f3;
+    }
+    
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #0d6efd;
+    }
+    
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 15px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 1/1;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 15px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .gallery-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #0d6efd;
+    }
+
+    body.dark-mode .section-title:after {
+      background-color: #0d6efd;
+    }
+    /* Add this to your existing dark mode styles */
+body.dark-mode .section-title p,
+body.dark-mode .section-title h3.news,
+body.dark-mode .news {
+  color: #0d6efd !important;
+}
+/* Update or add these styles */
+.nv {
+  font-size: 18px;
+ 
+}
+
+/* Ensure nav items stay blue in dark mode */
+body.dark-mode .nv {
+  color: #0d6efd !important;
+}
+
+/* Make the active nav item more prominent */
+.nav-item.active .nv {
+  font-weight: 800;
+  text-decoration: none;
+}
+/* Update your existing .nv styles */
+
+
+/* Dark mode hover effect - needs to be more specific */
+body.dark-mode .navbar-nav .nav-item .nv:hover {
+  color: #0d6efd !important;
+}
+
+/* Ensure dark mode doesn't override our hover */
+body.dark-mode .nv {
+  color: #ffffff !important; /* Default text color in dark mode */
+}
+
+/* Active nav item styling */
+.nav-item.active .nv {
+  font-weight: 800;
+  text-decoration: none;
+  color: #0d6efd !important;
+}
+
+/* Dark mode active nav item */
+body.dark-mode .nav-item.active .nv {
+  color: #0d6efd !important;
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.whatsapp-text {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+  }
+  
+  .whatsapp-text {
+    display: none;
+  }
+  
+  .whatsapp-btn i {
+    margin-right: 0;
+    font-size: 28px;
+  }
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 0 2px;
+  transition: all 0.3s ease;
+}
+
+.language-btn.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+body.dark-mode .language-btn {
+  color: #ffffff;
+}
+
+body.dark-mode .language-btn.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Footer WhatsApp Button */
+.footer-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-whatsapp-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-whatsapp-btn i {
+  margin-right: 8px;
+}
+body.dark-mode #nva a{
+  color: #0d6efd !important;
+}
   </style>
 </head>
 
@@ -482,437 +855,549 @@
     </symbol>
   </svg>
 
-  <header id="header">
-    <nav id="primary-header" class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/bfs.resized-removebg-preview.png" class="logo img-fluid">
-        </a>
-        <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
-          data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
-          <svg class="navbar-icon" width="60" height="60">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
-        </button>
-        <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-          <div class="offcanvas-header px-4 pb-0">
-            <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
-              data-bs-target="#bdNavbar"></button>
-          </div>
-          <div class="offcanvas-body align-items-center justify-content-end">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item px-3">
-                <a class="nv" href="index.html">Home</a>
-              </li>
-              <li class="nav-item px-3" style="color: #0d6efd;">
-                <a class="nv" aria-current="page" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nv" aria-current="page" href="service.html">Our Services</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nv" href="blog.html">Our Blog</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nv" href="contact.html">Contact Us</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nv" href="gallery.html">Gallery</a>
-              </li>
-              
-              <li class="nav-item px-3">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                  <svg id="sun-icon" width="24" height="24">
-                    <use xlink:href="#sun"></use>
-                  </svg>
-                  <svg id="moon-icon" width="24" height="24" style="display: none;">
-                    <use xlink:href="#moon"></use>
-                  </svg>
-                </button>
-              </li>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-              <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
-                <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                  aria-expanded="false">
-                  <svg class="search" width="24" height="24">
-                    <use xlink:href="#search"></use>
-                  </svg>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
-                  <li class="position-relative d-flex align-items-center p-0">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary position-absolute end-0" type="submit">
-                      <svg class="search" width="24" height="24">
-                        <use xlink:href="#search"></use>
-                      </svg>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <section id="about-us" class="position-relative bg-gray padding-small">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="imageblock me-4">
-            <a type="button" data-bs-toggle="modal" data-src="#"
-              data-bs-target="#myModal" class="play-btn position-relative">
-              <img class="img-fluid" src="images/clean2.resized-removebg-preview.png" alt="img">
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-5">
-          <div class="section-title mb-4">
-            <h1 style="color: #0d6efd;" >About Us</h1>
-            <h5>Welcome To <span style="color: #0d6efd; font-weight: bolder;">Boniette facility service</span></h5>
-          </div>
-          <p>Welcome to Boniette facility Services, your trusted partner for top-tier cleaning solutions. With years of industry
-            expertise, we are committed to delivering extra cleaning services that exceed your expectations. Our skilled
-            and dedicated team takes pride in transforming spaces into immaculate havens, ensuring cleanliness and
-            hygiene for homes and businesses alike.
-            <br>
-            <br>
-            Here, we prioritize customer satisfaction and tailor our services to meet your specific needs. Using
-            cutting-edge equipment and eco-friendly products, we leave no detail untouched, providing thorough and
-            meticulous cleaning for every corner of your space.
-          </p>
-        </div>
-      </div>
-    </div>
-    <img class="pb-5 position-absolute d-none d-xxl-block end-0 bottom-0 w-auto" src="images/bg-pattern-img.png"
-      alt="img">
-  </section>
-
-  <section class="why-us">
-    <div class="container">
-      <h2 id="why">What makes us stand out ?</h2>
-      
-      <div class="features-container">
-        <!-- Feature 1 -->
-        <div class="feature-box">
-          <div class="feature-icon">🧹</div>
-          <h3 class="feature-title" >Professional Cleaners</h3>
-          <p class="feature-desc">Our team consists of thoroughly vetted, trained professionals who take pride in delivering exceptional cleaning results every time.</p>
-        </div>
-        
-        <!-- Feature 2 -->
-        <div class="feature-box">
-          <div class="feature-icon">🌿</div>
-          <h3 class="feature-title" >Eco-Friendly Products</h3>
-          <p class="feature-desc">We use environmentally friendly cleaning solutions that are safe for your family, pets, and the planet.</p>
-        </div>
-        
-        <!-- Feature 3 -->
-        <div class="feature-box">
-          <div class="feature-icon">⏱️</div>
-          <h3 class="feature-title">Flexible Scheduling</h3>
-          <p class="feature-desc">We work around your schedule with cleaning services available 7 days a week, including evenings upon request.</p>
-        </div>
-        
-        <!-- Feature 5 -->
-        <div class="feature-box">
-          <div class="feature-icon">🏆</div>
-          <h3 class="feature-title">Award-Winning Service</h3>
-          <p class="feature-desc">Recognized as the best cleaning service in the area with multiple industry awards for excellence.</p>
-        </div>
-        
-        <!-- Feature 6 -->
-        <div class="feature-box" id="el" style="margin-bottom: 5%;">
-          <div class="feature-icon">🔒</div>
-          <h3 class="feature-title">Fully Insured</h3>
-          <p class="feature-desc">For your complete peace of mind, we're fully bonded and insured to protect your home and our team.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="our-equipment" id="why-us">
-    <div class="container" >
-      <h2 id="el">Professional-Grade Equipment</h2>
-      <p class="section-intro">We invest in top-tier cleaning tools and technology to deliver superior results for our clients.</p>
-      
-      <div class="equipment-grid">
-        <!-- Equipment Item 1 -->
-        <div class="equipment-card">
-          <div class="equipment-icon">🧽</div>
-          <h3>Microfiber Technology</h3>
-          <ul>
-            <li>Hospital-grade microfiber cloths</li>
-            <li>Electrostatically charged to trap dust</li>
-            <li>99.9% bacteria removal</li>
-          </ul>
-        </div>
-        
-        <!-- Equipment Item 2 -->
-        <div class="equipment-card">
-          <div class="equipment-icon">🧴</div>
-          <h3>Eco-Friendly Solutions</h3>
-          <ul>
-            <li>Green Seal certified products</li>
-            <li>Non-toxic, biodegradable formulas</li>
-            <li>Hypoallergenic options available</li>
-          </ul>
-        </div>
-        
-        <!-- Equipment Item 3 -->
-        <div class="equipment-card">
-          <div class="equipment-icon">🧹</div>
-          <h3>Advanced Tools</h3>
-          <ul>
-            <li>HEPA-filter vacuums (allergen removal)</li>
-            <li>Commercial-grade steam cleaners</li>
-            <li>Extension dusters for high surfaces</li>
-          </ul>
-        </div>
-        
-        <!-- Equipment Item 4 -->
-        <div class="equipment-card">
-          <div class="equipment-icon">🚿</div>
-          <h3>Specialized Equipment</h3>
-          <ul>
-            <li>Grout cleaning systems</li>
-            <li>Hard water stain removers</li>
-            <li>UV sanitizing lights</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="equipment-note">
-        <p><strong>Note:</strong> All equipment is regularly maintained and sanitized between jobs to ensure peak performance and hygiene.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-info" class="py-5 bg-accent-gradient">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#call-chat-rounded-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Give Us Call</h5>
-            <h5 class="fw-light text-light">+1-438-763-6430</h5>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#point-on-map-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">13 RUE J-B D'Amour</h5>
-            <h5 class="fw-light text-light">Mercier,QC,J6R OC5</h5>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <svg class="star me-1 light-blue-color" width="90" height="90">
-            <use xlink:href="#pen-new-round-outline" />
-          </svg>
-          <div class="contact-info-text ms-3">
-            <h5 class="text-light mb-0">Contact Us</h5>
-            <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer id="footer">
-    <div class="container padding-medium pb-5">
-      <div class="row flex-wrap justify-content-between">
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="fi">Boniette facility service</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="about.html">About Us</a>
-              </li>
-              <li class="pb-2">
-                <a href="gallery.html">Gallery</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Our Services</a>
-              </li>
-              <li class="pb-2">
-                <a href="blog.html">blog</a>
-              </li>
-              <li class="pb-2">
-                <a href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="fi">Services</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="service.html">Deep cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Window cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Office cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Move in/ Move out cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Green cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">commercial cleaning</a>
-              </li>
-              <li class="pb-2">
-                <a href="service.html">Waste management </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="fi">Help</h6>
-            <ul class="menu-list d-flex flex-column list-unstyled">
-              <li class="pb-2">
-                <a href="about.html">FAQs</a>
-              </li>
-              <li class="pb-2">
-                <a href="contact.html">Get in touch</a>
-              </li>
-              <li class="pb-2">
-                <a href="about.html">Info</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
-          <div class="footer-menu">
-            <h6 class="widget-title pb-2 fw-semibold" id="fi">Book your service</h6>
-            <p>Get best dedicated team of professionals for your service.</p>
-            <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" id="fi">Book Service</a>
-            <h5 class="text-capitalize fw-light mt-3" id="fi">Call Us: <a class="fw-semibold text-black" href="#">+1-438-763-6430</a> </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-gray">
-      <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
-        <p class="mb-0">© 2025 Boniette facility service  - All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Video Popup -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
-              height="40">
-              <use xlink:href="#close-sharp"></use>
-            </svg></button>
-          <div class="ratio ratio-16x9">
-            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-              allow="autoplay"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   
-  <script>
-    // Dark/Light Mode Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
+  <!-- WhatsApp Floating Button HTML -->
+   <a href="https://wa.me/14387636430" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text" data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+  </a>
+  
+  <!-- Font Awesome for WhatsApp icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+  
+  
+  <header id="header">
+      <nav id="primary-header" class="navbar navbar-expand-lg py-3">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/bfs.resized-removebg-preview.png" class="logo img-fluid">
+          </a>
+          <button class="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+            <svg class="navbar-icon" width="60" height="60">
+              <use xlink:href="#navbar-icon"></use>
+            </svg>
+          </button>
+          <div class="header-bottom offcanvas offcanvas-end" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+            <div class="offcanvas-header px-4 pb-0">
+              <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
+                data-bs-target="#bdNavbar"></button>
+            </div>
+            <div class="offcanvas-body align-items-center justify-content-end">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item px-3">
+                  <a class="nv" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+                </li>
+                <li class="nav-item px-3" id="nva" style="color: #0d6efd;">
+                  <a class="nv" aria-current="page" href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nv" aria-current="page" href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nv" href="blog.html" data-en="Our Blog" data-fr="Notre blog">Our Blog</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nv" href="contact.html" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nv" href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
+                </li>
+                
+  
+                <li class="nav-item px-3 language-switcher">
+                  <button class="language-btn active" data-lang="en">EN</button>
+                  <span style="color: #333;">/</span>
+                  <button class="language-btn" data-lang="fr">FR</button>
+                </li>
+  
+                <li class="nav-item px-3">
+                  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg id="sun-icon" width="24" height="24">
+                      <use xlink:href="#sun"></use>
+                    </svg>
+                    <svg id="moon-icon" width="24" height="24" style="display: none;">
+                      <use xlink:href="#moon"></use>
+                    </svg>
+                  </button>
+                </li>
+  
+                <li class="nav-item search-dropdown ms-3 ms-lg-5 dropdown">
+                  <a class="nav-link p-0 search dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">
+                    <svg class="search" width="24" height="24">
+                      <use xlink:href="#search"></use>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end animate slide mt-3 border-0 p-3 shadow">
+                    <li class="position-relative d-flex align-items-center p-0">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-en-placeholder="Search" data-fr-placeholder="Recherche">
+                      <button class="btn btn-primary position-absolute end-0" type="submit">
+                        <svg class="search" width="24" height="24">
+                          <use xlink:href="#search"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+    <section id="about-us" class="position-relative bg-gray padding-small">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="imageblock me-4">
+              <a type="button" data-bs-toggle="modal" data-src="#"
+                data-bs-target="#myModal" class="play-btn position-relative">
+                <img class="img-fluid" src="images/clean2.resized-removebg-preview.png" alt="img">
+              </a>
+            </div>
+          </div>
+  
+          <div class="col-md-6 mt-5">
+            <div class="section-title mb-4">
+              <h1 style="color: #0d6efd;" data-en="About Us" data-fr="À propos de nous">About Us</h1>
+              <h5 data-en="Welcome To" data-fr="Bienvenue chez">Welcome To <span style="color: #0d6efd; font-weight: bolder;">Boniette facility service</span></h5>
+            </div>
+            <p data-en="Welcome to Boniette facility Services, your trusted partner for top-tier cleaning solutions. With years of industry expertise, we are committed to delivering extra cleaning services that exceed your expectations. Our skilled and dedicated team takes pride in transforming spaces into immaculate havens, ensuring cleanliness and hygiene for homes and businesses alike.
+  
+  Here, we prioritize customer satisfaction and tailor our services to meet your specific needs. Using cutting-edge equipment and eco-friendly products, we leave no detail untouched, providing thorough and meticulous cleaning for every corner of your space."
+               data-fr="Bienvenue chez Boniette Facility Services, votre partenaire de confiance pour des solutions de nettoyage de premier ordre. Avec des années d'expertise dans le secteur, nous nous engageons à fournir des services de nettoyage supplémentaires qui dépassent vos attentes. Notre équipe qualifiée et dévouée est fière de transformer les espaces en des havres immaculés, garantissant propreté et hygiène pour les maisons et les entreprises.
+  
+  Ici, nous donnons la priorité à la satisfaction du client et adaptons nos services pour répondre à vos besoins spécifiques. En utilisant des équipements de pointe et des produits écologiques, nous ne laissons aucun détail de côté, fournissant un nettoyage minutieux pour chaque coin de votre espace.">
+              Welcome to Boniette facility Services, your trusted partner for top-tier cleaning solutions. With years of industry
+              expertise, we are committed to delivering extra cleaning services that exceed your expectations. Our skilled
+              and dedicated team takes pride in transforming spaces into immaculate havens, ensuring cleanliness and
+              hygiene for homes and businesses alike.
+              <br>
+              <br>
+              Here, we prioritize customer satisfaction and tailor our services to meet your specific needs. Using
+              cutting-edge equipment and eco-friendly products, we leave no detail untouched, providing thorough and
+              meticulous cleaning for every corner of your space.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="pb-5 position-absolute d-none d-xxl-block end-0 bottom-0 w-auto" src="images/bg-pattern-img.png"
+        alt="img">
+    </section>
+  
+    <section class="why-us">
+      <div class="container">
+        <h2 id="why" data-en="What makes us stand out?" data-fr="Qu'est-ce qui nous distingue ?">What makes us stand out ?</h2>
+        
+        <div class="features-container">
+          <!-- Feature 1 -->
+          <div class="feature-box">
+            <div class="feature-icon">🧹</div>
+            <h3 class="feature-title" data-en="Professional Cleaners" data-fr="Nettoyeurs professionnels">Professional Cleaners</h3>
+            <p class="feature-desc" data-en="Our team consists of thoroughly vetted, trained professionals who take pride in delivering exceptional cleaning results every time."
+               data-fr="Notre équipe est composée de professionnels soigneusement sélectionnés et formés qui sont fiers de fournir des résultats de nettoyage exceptionnels à chaque fois.">
+              Our team consists of thoroughly vetted, trained professionals who take pride in delivering exceptional cleaning results every time.
+            </p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="feature-box">
+            <div class="feature-icon">🌿</div>
+            <h3 class="feature-title" data-en="Eco-Friendly Products" data-fr="Produits écologiques">Eco-Friendly Products</h3>
+            <p class="feature-desc" data-en="We use environmentally friendly cleaning solutions that are safe for your family, pets, and the planet."
+               data-fr="Nous utilisons des solutions de nettoyage respectueuses de l'environnement, sans danger pour votre famille, vos animaux de compagnie et la planète.">
+              We use environmentally friendly cleaning solutions that are safe for your family, pets, and the planet.
+            </p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="feature-box">
+            <div class="feature-icon">⏱️</div>
+            <h3 class="feature-title" data-en="Flexible Scheduling" data-fr="Planification flexible">Flexible Scheduling</h3>
+            <p class="feature-desc" data-en="We work around your schedule with cleaning services available 7 days a week, including evenings upon request."
+               data-fr="Nous nous adaptons à votre emploi du temps avec des services de nettoyage disponibles 7 jours sur 7, y compris en soirée sur demande.">
+              We work around your schedule with cleaning services available 7 days a week, including evenings upon request.
+            </p>
+          </div>
+          
+          <!-- Feature 5 -->
+          <div class="feature-box">
+            <div class="feature-icon">🏆</div>
+            <h3 class="feature-title" data-en="Award-Winning Service" data-fr="Service primé">Award-Winning Service</h3>
+            <p class="feature-desc" data-en="Recognized as the best cleaning service in the area with multiple industry awards for excellence."
+               data-fr="Reconnu comme le meilleur service de nettoyage de la région avec plusieurs prix d'excellence dans le secteur.">
+              Recognized as the best cleaning service in the area with multiple industry awards for excellence.
+            </p>
+          </div>
+          
+          <!-- Feature 6 -->
+          <div class="feature-box" id="el" style="margin-bottom: 5%;">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title" data-en="Fully Insured" data-fr="Entièrement assuré">Fully Insured</h3>
+            <p class="feature-desc" data-en="For your complete peace of mind, we're fully bonded and insured to protect your home and our team."
+               data-fr="Pour votre tranquillité d'esprit, nous sommes entièrement cautionnés et assurés pour protéger votre maison et notre équipe.">
+              For your complete peace of mind, we're fully bonded and insured to protect your home and our team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="our-equipment" id="why-us">
+      <div class="container" >
+        <h2 id="el" data-en="Professional-Grade Equipment" data-fr="Équipement professionnel">Professional-Grade Equipment</h2>
+        <p class="section-intro" data-en="We invest in top-tier cleaning tools and technology to deliver superior results for our clients."
+           data-fr="Nous investissons dans des outils et technologies de nettoyage de premier ordre pour offrir des résultats supérieurs à nos clients.">
+          We invest in top-tier cleaning tools and technology to deliver superior results for our clients.
+        </p>
+        
+        <div class="equipment-grid">
+          <!-- Equipment Item 1 -->
+          <div class="equipment-card">
+            <div class="equipment-icon">🧽</div>
+            <h3 data-en="Microfiber Technology" data-fr="Technologie microfibre">Microfiber Technology</h3>
+            <ul>
+              <li data-en="Hospital-grade microfiber cloths" data-fr="Chiffons microfibres de qualité hospitalière">Hospital-grade microfiber cloths</li>
+              <li data-en="Electrostatically charged to trap dust" data-fr="Chargés électrostatiquement pour piéger la poussière">Electrostatically charged to trap dust</li>
+              <li data-en="99.9% bacteria removal" data-fr="Élimination de 99,9% des bactéries">99.9% bacteria removal</li>
+            </ul>
+          </div>
+          
+          <!-- Equipment Item 2 -->
+          <div class="equipment-card">
+            <div class="equipment-icon">🧴</div>
+            <h3 data-en="Eco-Friendly Solutions" data-fr="Solutions écologiques">Eco-Friendly Solutions</h3>
+            <ul>
+              <li data-en="Green Seal certified products" data-fr="Produits certifiés Green Seal">Green Seal certified products</li>
+              <li data-en="Non-toxic, biodegradable formulas" data-fr="Formules non toxiques et biodégradables">Non-toxic, biodegradable formulas</li>
+              <li data-en="Hypoallergenic options available" data-fr="Options hypoallergéniques disponibles">Hypoallergenic options available</li>
+            </ul>
+          </div>
+          
+          <!-- Equipment Item 3 -->
+          <div class="equipment-card">
+            <div class="equipment-icon">🧹</div>
+            <h3 data-en="Advanced Tools" data-fr="Outils avancés">Advanced Tools</h3>
+            <ul>
+              <li data-en="HEPA-filter vacuums (allergen removal)" data-fr="Aspirateurs à filtre HEPA (élimination des allergènes)">HEPA-filter vacuums (allergen removal)</li>
+              <li data-en="Commercial-grade steam cleaners" data-fr="Nettoyeurs vapeur de qualité commerciale">Commercial-grade steam cleaners</li>
+              <li data-en="Extension dusters for high surfaces" data-fr="Plumeaux extensibles pour surfaces élevées">Extension dusters for high surfaces</li>
+            </ul>
+          </div>
+          
+          <!-- Equipment Item 4 -->
+          <div class="equipment-card">
+            <div class="equipment-icon">🚿</div>
+            <h3 data-en="Specialized Equipment" data-fr="Équipement spécialisé">Specialized Equipment</h3>
+            <ul>
+              <li data-en="Grout cleaning systems" data-fr="Systèmes de nettoyage de joints">Grout cleaning systems</li>
+              <li data-en="Hard water stain removers" data-fr="Détachants pour dépôts calcaires">Hard water stain removers</li>
+              <li data-en="UV sanitizing lights" data-fr="Lampes de désinfection UV">UV sanitizing lights</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-note">
+          <p><strong data-en="Note:" data-fr="Note :">Note:</strong> <span data-en="All equipment is regularly maintained and sanitized between jobs to ensure peak performance and hygiene."
+           data-fr="Tout l'équipement est régulièrement entretenu et désinfecté entre les travaux pour garantir des performances optimales et une hygiène parfaite.">
+            All equipment is regularly maintained and sanitized between jobs to ensure peak performance and hygiene.
+          </span></p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="contact-info" class="py-5 bg-accent-gradient">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+            <svg class="star me-1 light-blue-color" width="90" height="90">
+              <use xlink:href="#call-chat-rounded-outline" />
+            </svg>
+            <div class="contact-info-text ms-3">
+              <h5 class="text-light mb-0" data-en="Give Us Call" data-fr="Appelez-nous">Give Us Call</h5>
+              <h5 class="fw-light text-light">+1-438-763-6430</h5>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-center">
+            <svg class="star me-1 light-blue-color" width="90" height="90">
+              <use xlink:href="#point-on-map-outline" />
+            </svg>
+            <div class="contact-info-text ms-3">
+              <h5 class="text-light mb-0">13 RUE J-B D'Amour</h5>
+              <h5 class="fw-light text-light">Mercier,QC,J6R OC5</h5>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-center">
+            <svg class="star me-1 light-blue-color" width="90" height="90">
+              <use xlink:href="#pen-new-round-outline" />
+            </svg>
+            <div class="contact-info-text ms-3">
+              <h5 class="text-light mb-0" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h5>
+              <h5 class="fw-light text-light ">boniettefacilityservices@gmail.com</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer id="footer">
+      <div class="container padding-medium pb-5">
+        <div class="row flex-wrap justify-content-between">
+          <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+            <div class="footer-menu">
+              <h6 class="widget-title pb-2 fw-semibold" id="fi">Boniette facility service</h6>
+              <ul class="menu-list d-flex flex-column list-unstyled">
+                <li class="pb-2">
+                  <a href="about.html" data-en="About Us" data-fr="À propos">About Us</a>
+                </li>
+                <li class="pb-2">
+                  <a href="gallery.html" data-en="Gallery" data-fr="Galerie">Gallery</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Our Services" data-fr="Nos services">Our Services</a>
+                </li>
+                <li class="pb-2">
+                  <a href="blog.html" data-en="blog" data-fr="blog">blog</a>
+                </li>
+                <li class="pb-2">
+                  <a href="contact.html" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+            <div class="footer-menu">
+              <h6 class="widget-title pb-2 fw-semibold" id="fi" data-en="Services" data-fr="Services">Services</h6>
+              <ul class="menu-list d-flex flex-column list-unstyled">
+                <li class="pb-2">
+                  <a href="service.html" data-en="Deep cleaning" data-fr="Nettoyage en profondeur">Deep cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Window cleaning" data-fr="Nettoyage de vitres">Window cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Office cleaning" data-fr="Nettoyage de bureaux">Office cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Move in/ Move out cleaning" data-fr="Nettoyage d'emménagement/déménagement">Move in/ Move out cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Green cleaning" data-fr="Nettoyage écologique">Green cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="commercial cleaning" data-fr="Nettoyage commercial">commercial cleaning</a>
+                </li>
+                <li class="pb-2">
+                  <a href="service.html" data-en="Waste management" data-fr="Gestion des déchets">Waste management</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+            <div class="footer-menu">
+              <h6 class="widget-title pb-2 fw-semibold" id="fi" data-en="Help" data-fr="Aide">Help</h6>
+              <ul class="menu-list d-flex flex-column list-unstyled">
+                <li class="pb-2">
+                  <a href="about.html" data-en="FAQs" data-fr="FAQ">FAQs</a>
+                </li>
+                <li class="pb-2">
+                  <a href="contact.html" data-en="Get in touch" data-fr="Nous contacter">Get in touch</a>
+                </li>
+                <li class="pb-2">
+                  <a href="about.html" data-en="Info" data-fr="Infos">Info</a>
+                </li>
+                <li class="pb-2">
+                  <a href="#" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+            <div class="footer-menu">
+              <h6 class="widget-title pb-2 fw-semibold" data-en="Book your service" data-fr="Réservez votre service">Book your service</h6>
+              <p data-en="Get best dedicated team of professionals for your service." data-fr="Obtenez la meilleure équipe de professionnels pour votre service.">Get best dedicated team of professionals for your service.</p>
+              <a class="btn btn-primary" href="contact.html" style="background-color: #0d6efd;" data-en="Book Service" data-fr="Réserver un service">Book Service</a>
+              <a href="https://wa.me/+14387636430" class="footer-whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray">
+        <div class="container footer-bottom d-md-flex text-center justify-content-between py-4">
+          <p class="mb-0" data-en="© 2025 Boniette facility service - All rights reserved" data-fr="© 2025 Boniette facility service - Tous droits réservés">© 2025 Boniette facility service - All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Video Popup -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40"
+                height="40">
+                <use xlink:href="#close-sharp"></use>
+              </svg></button>
+            <div class="ratio ratio-16x9">
+              <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                allow="autoplay"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
-    // Check for saved user preference or use system preference
-    const currentTheme = localStorage.getItem('theme') || 
-                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    // Apply the current theme
-    if (currentTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      sunIcon.style.display = 'none';
-      moonIcon.style.display = 'block';
-    } else {
-      document.body.classList.remove('dark-mode');
-      sunIcon.style.display = 'block';
-      moonIcon.style.display = 'none';
-    }
-    
-    // Toggle theme when button is clicked
-    themeToggle.addEventListener('click', () => {
-      if (document.body.classList.contains('dark-mode')) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-      } else {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-      }
-    });
-    
-    // Initialize Swiper with responsive breakpoints
-    document.addEventListener('DOMContentLoaded', function () {
-      const servicesSwiper = new Swiper('.services-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 100000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-          },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          }
+    <script>
+      // Language Toggle Functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const languageButtons = document.querySelectorAll('.language-btn');
+        let currentLanguage = 'en'; // Default language
+        
+        // Check for saved language preference
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+          currentLanguage = savedLanguage;
+          setActiveLanguageButton(currentLanguage);
+          updatePageLanguage(currentLanguage);
+        }
+        
+        // Add click event listeners to language buttons
+        languageButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const selectedLanguage = this.getAttribute('data-lang');
+            if (selectedLanguage !== currentLanguage) {
+              currentLanguage = selectedLanguage;
+              localStorage.setItem('language', currentLanguage);
+              setActiveLanguageButton(currentLanguage);
+              updatePageLanguage(currentLanguage);
+            }
+          });
+        });
+        
+        // Set active language button style
+        function setActiveLanguageButton(lang) {
+          languageButtons.forEach(button => {
+            if (button.getAttribute('data-lang') === lang) {
+              button.classList.add('active');
+            } else {
+              button.classList.remove('active');
+            }
+          });
+        }
+        
+        // Update all elements with data-en and data-fr attributes
+        function updatePageLanguage(lang) {
+          // Update text content
+          document.querySelectorAll('[data-en], [data-fr]').forEach(element => {
+            if (element.hasAttribute(`data-${lang}`)) {
+              if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.setAttribute('placeholder', element.getAttribute(`data-${lang}-placeholder`));
+              } else {
+                element.textContent = element.getAttribute(`data-${lang}`);
+              }
+            }
+          });
+          
+          // Update input placeholders
+          document.querySelectorAll('[data-en-placeholder], [data-fr-placeholder]').forEach(element => {
+            if (element.hasAttribute(`data-${lang}-placeholder`)) {
+              element.setAttribute('placeholder', element.getAttribute(`data-${lang}-placeholder`));
+            }
+          });
         }
       });
-    });
-  </script>
-</body>
-</html>
+  
+      // Dark/Light Mode Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('sun-icon');
+      const moonIcon = document.getElementById('moon-icon');
+      
+      // Check for saved user preference or use system preference
+      const currentTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply the current theme
+      if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      } else {
+        document.body.classList.remove('dark-mode');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+      
+      // Toggle theme when button is clicked
+      themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        } else {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        }
+      });
+      
+      // Initialize Swiper with responsive breakpoints
+      document.addEventListener('DOMContentLoaded', function () {
+        const servicesSwiper = new Swiper('.services-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 100000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            }
+          }
+        });
+      });
+    </script>
+  
+  </body>
+  </html>
