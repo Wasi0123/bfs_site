@@ -491,6 +491,58 @@
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
     }
+    .submit-button {
+  background-color: #0d6efd !important;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  min-width: 120px;
+  width: 70px;
+}
+
+.submit-button:hover {
+  background-color: #0b5ed7 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.submit-button:active {
+  background-color: #0a58ca !important;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(13, 110, 253, 0.2);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.submit-button:disabled {
+  background-color: #6c757d !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+#col{
+  background-color: #777676;
+}
+#header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 5%;
+        }
   </style>
 </head>
 
@@ -522,10 +574,11 @@
     <span class="whatsapp-text" data-en="Chat on WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
   </a>
 
-  <header id="header">
+  <header id="header" >
 
 
-    <nav class="header-top bg-gray pt-2 pb-2">
+    
+    <nav class="header-top bg-gray pt-2 pb-2" id="col" >
       <div class="container">
         <div class="d-flex flex-wrap justify-content-between align-items-center">
           <ul class="info d-flex flex-wrap list-unstyled m-0">
@@ -543,16 +596,16 @@
             <li class="time text-capitalize d-flex align-items-center me-4">
               <svg class="accent-color me-1" width="18" height="18">
                 <use xlink:href="#clock"></use>
-              </svg><span data-en="8:00-18:00, Sat: Closed" data-fr="8:00-18:00, Sam: Fermé">8:00-18:00, Sat: Closed</span>
+              </svg><span data-en="Open 24/7" data-fr=" Disponible 24/7">Open 24/7</span>
             </li>
           </ul>
   
         </div>
       </div>
     </nav>
+  
 
-
-    <nav id="primary-header" class="navbar navbar-expand-lg py-3">
+    <nav id="primary-header" class="navbar navbar-expand-lg py-3" >
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="images/bfs.resized-removebg-preview.png" class="logo img-fluid">
@@ -641,7 +694,8 @@
         <h2 style="color: #0d6efd;" data-en="Book Us Now" data-fr="Réservez maintenant">Book Us Now</h2>
         <p class="mt-3" data-en="Fill out the form below and we'll get back to you within 24 hours" data-fr="Remplissez le formulaire ci-dessous et nous vous répondrons ">Fill out the form below and we'll get back to you </p>
       </div>
-      <form class="contact-form row mt-5">
+      <form  action="https://formspree.io/f/mdkloygr"
+      method="POST"  class="contact-form row mt-5">
         <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
           <input type="text" name="name" placeholder="Full Name" class="w-100 border ps-4 rounded-3" data-en="Full Name" data-fr="Nom complet">
         </div>
@@ -676,10 +730,11 @@
         <div class="col-md-12 col-sm-12 mb-4">
           <textarea class="w-100 border p-3 ps-4 rounded-3" type="text" name="details" placeholder="Details" data-en="Details" data-fr="Détails"></textarea>
         </div>
+
+<button  type="submit"  class="submit-button"   style="background-color: #0d6efd;" data-en="Submit" data-fr="Soumettre"> Submit</button>
       </form>
-      <a href="#" class="btn btn-medium btn-primary btn-pill mt-3 text-uppercase submit-btn"
-        style="background-color: #0d6efd;" data-en="Submit" data-fr="Soumettre">Submit</a>
-    </div>
+     
+    </div> 
   </section>
 
   <section id="contact-info" class="py-5 bg-accent-gradient">
