@@ -535,6 +535,27 @@ body.dark-mode .language-btn.active {
             z-index: 1000;
             padding: 0 5%;
         }
+        #header .header-top.bg-gray {
+    background-color: #1976D2 !important;
+    background-image: none !important;
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+/* Optional: Improve text visibility on blue background */
+#header .header-top .info span {
+    color: white !important;
+}
+
+/* Optional: Make SVG icons more visible */
+#header .header-top .accent-color {
+    fill: #FFD700 !important;
+}
+
 </style>
 
 
@@ -691,11 +712,9 @@ body.dark-mode .language-btn.active {
 
 <!-- Font Awesome for WhatsApp icon -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-    <header id="header">
-        <nav class="header-top bg-gray pt-2 pb-2" >
-            <div class="container" >
+    <header id="header" >
+        <nav class="header-top bg-gray pt-2 pb-2"  >
+            <div class="container"  >
                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                     <ul class="info d-flex flex-wrap list-unstyled m-0">
                         <li class="location d-flex align-items-center me-4">
